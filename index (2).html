@@ -1,0 +1,3114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Founder Brief · Phoenix Integrated Health Platform · v1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sand: #f3ede2;
+  --sand-2: #e8dfce;
+  --paper: #faf6ee;
+  --ink: #1c1714;
+  --ink-2: #3a322c;
+  --ink-3: #6b5f54;
+  --rule: #d4c8b4;
+  --terracotta: #b04a2f;
+  --terracotta-deep: #8a3820;
+  --sage: #5f7558;
+  --sage-deep: #45563f;
+  --ochre: #c9974a;
+  --slate: #2d3540;
+  --pos: #4a6b3f;
+  --neg: #a13a26;
+  --warn: #b88330;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 18% 8%, rgba(176, 74, 47, 0.05) 0%, transparent 38%),
+    radial-gradient(circle at 82% 72%, rgba(95, 117, 88, 0.05) 0%, transparent 42%);
+}
+
+/* ============ MASTHEAD ============ */
+.masthead {
+  border-bottom: 1px solid var(--ink);
+  padding: 18px 0;
+  background: rgba(250, 246, 238, 0.94);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.masthead-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.masthead-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.masthead-title em { font-style: italic; color: var(--terracotta); font-weight: 400; }
+.masthead-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--terracotta); }
+.stamp {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid var(--terracotta);
+  color: var(--terracotta);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+
+/* ============ TOP NAV ============ */
+.section-nav {
+  position: sticky;
+  top: 60px;
+  z-index: 90;
+  background: rgba(250, 246, 238, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 0;
+}
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 36px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.18s;
+  border-radius: 2px;
+}
+.nav-btn:hover { color: var(--ink); background: var(--sand); }
+.nav-btn.active { color: var(--paper); background: var(--ink); }
+.nav-btn .num { color: var(--terracotta); margin-right: 6px; font-weight: 600; }
+.nav-btn.active .num { color: var(--ochre); }
+
+/* ============ HERO ============ */
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 64px 36px 40px;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: '';
+  height: 1px;
+  background: var(--terracotta);
+  flex: 0 0 24px;
+}
+.hero-eyebrow::after { flex: 1; }
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(40px, 5.5vw, 70px);
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  margin-bottom: 22px;
+  max-width: 1100px;
+}
+.hero h1 em { font-style: italic; color: var(--terracotta); font-weight: 300; }
+.hero p.lede {
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  font-weight: 300;
+  max-width: 820px;
+  margin-bottom: 28px;
+}
+.hero-meta-row {
+  display: flex;
+  gap: 48px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-meta .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-3);
+}
+.hero-meta .value {
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+/* ============ LANDSCAPE / DUAL BUSINESS ============ */
+.landscape {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 36px;
+  border-bottom: 1px solid var(--rule);
+}
+.landscape-header {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+  align-items: baseline;
+}
+.section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--terracotta);
+  padding-top: 14px;
+  border-top: 2px solid var(--terracotta);
+}
+.landscape-header h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(32px, 4.2vw, 54px);
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.landscape-header h2 em { font-style: italic; color: var(--terracotta); font-weight: 300; }
+.landscape-deck {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  font-weight: 300;
+  max-width: 760px;
+}
+
+/* Side-by-side business panels */
+.business-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin: 40px 0;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+.business-panel {
+  padding: 36px;
+  position: relative;
+}
+.business-panel.wellness {
+  background: linear-gradient(180deg, var(--sand) 0%, var(--paper) 35%);
+  border-right: 1px solid var(--ink);
+}
+.business-panel.research {
+  background: linear-gradient(180deg, #ecf0e6 0%, var(--paper) 35%);
+}
+.biz-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+.biz-tag.wellness { background: var(--terracotta); color: var(--paper); }
+.biz-tag.research { background: var(--sage-deep); color: var(--paper); }
+.biz-title {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+.biz-title em { font-style: italic; color: var(--ink-2); font-weight: 400; }
+.biz-tagline {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--ink-2);
+  font-weight: 300;
+  margin-bottom: 28px;
+  line-height: 1.45;
+}
+
+.biz-stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 24px 0 28px;
+  padding: 20px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.biz-stat .biz-stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-3);
+  margin-bottom: 4px;
+}
+.biz-stat .biz-stat-value {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+.biz-stat .biz-stat-sub {
+  font-size: 11px;
+  color: var(--ink-3);
+  margin-top: 3px;
+}
+
+.biz-section {
+  margin-bottom: 24px;
+}
+.biz-section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.biz-section p {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.biz-list {
+  list-style: none;
+  padding: 0;
+}
+.biz-list li {
+  font-size: 14px;
+  color: var(--ink-2);
+  padding: 6px 0;
+  border-bottom: 1px dotted var(--rule);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.biz-list li:last-child { border-bottom: none; }
+.biz-list .li-label { color: var(--ink-2); }
+.biz-list .li-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  background: var(--sand-2);
+  color: var(--ink);
+  border-radius: 2px;
+}
+.pill.wellness { background: rgba(176, 74, 47, 0.12); color: var(--terracotta-deep); }
+.pill.research { background: rgba(95, 117, 88, 0.18); color: var(--sage-deep); }
+
+.synergy-band {
+  background: var(--ink);
+  color: var(--sand);
+  padding: 32px 36px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.synergy-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ochre);
+}
+.synergy-text {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: var(--sand);
+}
+.synergy-text strong { color: var(--ochre); font-weight: 500; }
+
+/* ============ COMPETITIVE DEEP DIVE ============ */
+.competitive-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 36px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.comp-toggle {
+  display: flex;
+  gap: 0;
+  margin: 28px 0 0;
+  border-bottom: 1px solid var(--ink);
+}
+.comp-toggle-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-bottom: none;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-right: 2px;
+}
+.comp-toggle-btn.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.comp-toggle-btn .ct-count {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 9px;
+  color: var(--terracotta);
+  font-weight: 600;
+}
+.comp-toggle-btn.active .ct-count { color: var(--ochre); }
+
+.comp-panel {
+  border: 1px solid var(--ink);
+  border-top: none;
+  padding: 32px;
+  background: var(--paper);
+}
+.comp-tab-content { display: none; }
+.comp-tab-content.active { display: block; }
+
+.comp-table-wrap { overflow-x: auto; }
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: var(--paper);
+}
+.comp-table th {
+  background: var(--sand);
+  color: var(--ink);
+  padding: 12px 14px;
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 2px solid var(--ink);
+  border-right: 1px solid var(--rule);
+  vertical-align: bottom;
+}
+.comp-table th:last-child { border-right: none; }
+.comp-table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  color: var(--ink-2);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.comp-table td:last-child { border-right: none; }
+.comp-table tr:last-child td { border-bottom: none; }
+.comp-table tr:hover td { background: rgba(243, 237, 226, 0.5); }
+.comp-table .name-cell strong {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 3px;
+}
+.comp-table .name-cell .sub {
+  font-size: 11px;
+  color: var(--ink-3);
+  font-style: italic;
+}
+.comp-table td.num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.tag-row { display: flex; flex-wrap: wrap; gap: 4px; }
+.mini-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 2px;
+  display: inline-block;
+  font-weight: 600;
+}
+.mini-tag.t-physician { background: var(--ink); color: var(--paper); }
+.mini-tag.t-app { background: var(--ochre); color: var(--ink); }
+.mini-tag.t-naturopath { background: var(--sage); color: var(--paper); }
+.mini-tag.t-academic { background: var(--terracotta); color: var(--paper); }
+.mini-tag.t-commercial { background: var(--sage-deep); color: var(--paper); }
+.mini-tag.t-network { background: var(--slate); color: var(--paper); }
+
+/* ============ SUBMARKET CARDS ============ */
+.submarket-stack { display: flex; flex-direction: column; gap: 28px; margin-top: 28px; }
+.submarket-block {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  overflow: hidden;
+}
+.submarket-block.target {
+  border: 2px solid var(--terracotta);
+  box-shadow: 0 8px 28px -14px rgba(176, 74, 47, 0.3);
+}
+.submarket-block.target .submarket-banner { background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-deep) 100%); }
+.submarket-banner {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 18px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.sm-banner-left {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.sm-name {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  color: var(--paper);
+}
+.sm-target-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  background: var(--ochre);
+  color: var(--ink);
+  font-weight: 700;
+}
+.sm-meta {
+  display: flex;
+  gap: 28px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--sand-2);
+  letter-spacing: 0.06em;
+}
+.sm-meta .sm-meta-num { color: var(--ochre); font-weight: 600; }
+.submarket-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.sm-top3 { padding: 24px 26px; border-right: 1px solid var(--rule); }
+.sm-ownership { padding: 24px 26px; background: var(--sand); }
+.sm-section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.provider-card {
+  padding: 12px 0;
+  border-bottom: 1px dotted var(--rule);
+}
+.provider-card:last-child { border-bottom: none; }
+.provider-rank {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--terracotta);
+  font-weight: 400;
+  display: inline-block;
+  width: 28px;
+}
+.provider-name {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  display: inline;
+}
+.provider-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--ink-3);
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+  margin-left: 28px;
+}
+.provider-desc {
+  font-size: 13px;
+  color: var(--ink-2);
+  margin-top: 6px;
+  margin-left: 28px;
+  line-height: 1.5;
+}
+.ownership-row {
+  margin-bottom: 14px;
+}
+.ownership-row:last-child { margin-bottom: 0; }
+.ownership-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.ownership-label {
+  font-family: 'Inter Tight', sans-serif;
+  color: var(--ink-2);
+  font-weight: 500;
+}
+.ownership-pct {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.ownership-bar {
+  height: 7px;
+  background: rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.ownership-fill {
+  height: 100%;
+  transition: width 0.6s ease;
+}
+.fill-physician { background: var(--ink); }
+.fill-app { background: var(--ochre); }
+.fill-naturopath { background: var(--sage); }
+.fill-corporate { background: var(--slate); }
+.fill-mobile { background: var(--terracotta); }
+.fill-aesthetic { background: #b88a9e; }
+.sm-summary {
+  background: var(--paper);
+  padding: 16px 26px;
+  border-top: 1px solid var(--rule);
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.sm-summary strong { color: var(--ink); font-weight: 600; }
+
+.takeaway-band {
+  background: var(--sand);
+  border: 1px solid var(--terracotta);
+  padding: 22px 26px;
+  margin-top: 28px;
+}
+.takeaway-band-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 8px;
+}
+.takeaway-band p {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.takeaway-band p strong { color: var(--terracotta-deep); }
+
+.market-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 28px 0;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.market-stat {
+  padding: 22px 24px;
+  border-right: 1px solid var(--rule);
+}
+.market-stat:last-child { border-right: none; }
+.market-stat .ms-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 8px;
+}
+.market-stat .ms-value {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1;
+}
+.market-stat .ms-sub {
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.therapeutic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+.therapeutic-card {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  padding: 20px 22px;
+}
+.therapeutic-card.tier-a { border-left: 4px solid var(--terracotta); }
+.therapeutic-card.tier-b { border-left: 4px solid var(--ochre); }
+.therapeutic-card.tier-c { border-left: 4px solid var(--sage); }
+.tc-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.therapeutic-card.tier-a .tc-eyebrow { color: var(--terracotta); }
+.therapeutic-card.tier-b .tc-eyebrow { color: var(--ochre); }
+.therapeutic-card.tier-c .tc-eyebrow { color: var(--sage); }
+.tc-title {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.tc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tc-list li {
+  font-size: 13px;
+  color: var(--ink-2);
+  padding: 5px 0;
+  border-bottom: 1px dotted var(--rule);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.tc-list li:last-child { border-bottom: none; }
+.tc-list .val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tc-note {
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-top: 10px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ============ THREE PATHS ============ */
+.paths-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 36px;
+  border-bottom: 1px solid var(--rule);
+}
+.paths-header {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  margin-bottom: 24px;
+  align-items: baseline;
+}
+.paths-header h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(32px, 4.2vw, 54px);
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.paths-header h2 em { font-style: italic; color: var(--terracotta); font-weight: 300; }
+.paths-deck {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  font-weight: 300;
+  max-width: 760px;
+}
+
+.capital-reality {
+  background: var(--ink);
+  color: var(--sand);
+  padding: 28px 32px;
+  margin: 32px 0 48px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+.cr-block .cr-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 6px;
+}
+.cr-block .cr-value {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+.cr-block .cr-sub {
+  font-size: 12px;
+  color: var(--sand-2);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0 32px;
+}
+.path-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.2s;
+}
+.path-card.recommended {
+  border: 2px solid var(--terracotta);
+  box-shadow: 0 12px 36px -16px rgba(176, 74, 47, 0.35);
+}
+.path-card.recommended::before {
+  content: 'Recommended starting point';
+  position: absolute;
+  top: -11px;
+  left: 20px;
+  background: var(--terracotta);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+.path-header {
+  padding: 28px 24px 18px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--sand);
+}
+.path-card.recommended .path-header { background: linear-gradient(180deg, #f5e7dd 0%, var(--sand) 100%); }
+.path-letter {
+  font-family: 'Fraunces', serif;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 300;
+  color: var(--terracotta);
+  font-style: italic;
+}
+.path-name {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.path-summary {
+  font-family: 'Fraunces', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-2);
+  font-weight: 300;
+}
+
+.path-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.path-block .path-block-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.path-block ul {
+  list-style: none;
+  padding: 0;
+}
+.path-block ul li {
+  font-size: 13px;
+  color: var(--ink-2);
+  padding: 4px 0;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+.path-block ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--terracotta);
+  font-weight: 600;
+}
+.path-block p {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.path-block .num-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px dotted var(--rule);
+  color: var(--ink-2);
+}
+.path-block .num-line:last-child { border-bottom: none; }
+.path-block .num-line strong { color: var(--ink); font-weight: 600; }
+.path-block .num-line .val { font-weight: 600; color: var(--ink); }
+
+.path-verdict {
+  margin: auto -24px -24px;
+  padding: 18px 24px;
+  background: var(--sand);
+  border-top: 1px solid var(--rule);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.path-verdict .verdict-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.path-verdict .verdict-line strong { color: var(--ink); }
+.path-verdict .indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.ind-pos { background: var(--sage); }
+.ind-med { background: var(--ochre); }
+.ind-neg { background: var(--neg); }
+.ind-mid { background: var(--warn); }
+
+/* ============ COMPARISON TABLE ============ */
+.compare-section { margin-top: 56px; }
+.compare-title {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+.compare-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 22px;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  font-size: 13px;
+}
+.compare-table th {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 14px 16px;
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-right: 1px solid var(--ink-2);
+  vertical-align: bottom;
+}
+.compare-table th:last-child { border-right: none; }
+.compare-table th.path-col {
+  background: var(--ink);
+  position: relative;
+}
+.compare-table th.path-col.recommended {
+  background: var(--terracotta);
+}
+.compare-table th .ph-letter {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 32px;
+  display: block;
+  margin-bottom: 4px;
+  text-transform: none;
+  letter-spacing: -0.015em;
+  font-weight: 300;
+}
+.compare-table th .ph-name {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+.compare-table th .ph-tag {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+  text-transform: none;
+  margin-top: 4px;
+}
+.compare-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  color: var(--ink-2);
+  vertical-align: top;
+}
+.compare-table td:last-child { border-right: none; }
+.compare-table tbody tr:last-child td { border-bottom: none; }
+.compare-table td.row-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 600;
+  background: var(--sand);
+  border-right: 1px solid var(--rule);
+}
+.compare-table tr.divider-row td {
+  background: var(--ink);
+  color: var(--ochre);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  font-weight: 600;
+}
+.compare-table td.num-cell {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+.compare-table td.recommended-col {
+  background: rgba(176, 74, 47, 0.04);
+}
+.fit-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.fit-track {
+  flex: 1;
+  height: 5px;
+  background: var(--sand-2);
+  max-width: 100px;
+}
+.fit-fill {
+  height: 100%;
+  background: var(--terracotta);
+}
+.fit-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  width: 30px;
+  text-align: right;
+}
+
+/* ============ DECISION GUIDE ============ */
+.decision-section {
+  background: var(--ink);
+  color: var(--sand);
+  padding: 64px 36px;
+}
+.decision-inner { max-width: 1400px; margin: 0 auto; }
+.decision-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 18px;
+}
+.decision-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 28px;
+  max-width: 900px;
+}
+.decision-title em { font-style: italic; color: var(--ochre); font-weight: 300; }
+.decision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 36px;
+}
+.decision-card {
+  border: 1px solid var(--ink-3);
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+}
+.decision-card-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 10px;
+}
+.decision-card-q {
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--sand);
+  margin-bottom: 12px;
+}
+.decision-card-a {
+  font-size: 13px;
+  color: var(--sand-2);
+  line-height: 1.5;
+}
+.decision-card-a strong { color: var(--ochre); font-weight: 600; }
+
+/* ============ RAISE READINESS ============ */
+.raise-section { max-width: 1400px; margin: 0 auto; padding: 80px 36px; border-bottom: 1px solid var(--rule); }
+.raise-intro {
+  background: var(--sand);
+  border-left: 3px solid var(--terracotta);
+  padding: 24px 28px;
+  margin: 24px 0 36px;
+}
+.raise-intro p {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink);
+  font-weight: 300;
+}
+.raise-intro p strong { color: var(--terracotta); font-weight: 500; }
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.checklist-block {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 28px;
+}
+.checklist-block-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.checklist-block-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.checklist-block-sub {
+  font-family: 'Fraunces', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-3);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.check-list { list-style: none; padding: 0; }
+.check-list li {
+  font-size: 13px;
+  color: var(--ink-2);
+  padding: 10px 0 10px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.5;
+}
+.check-list li:last-child { border-bottom: none; }
+.check-list li::before {
+  content: '☐';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: var(--terracotta);
+  font-size: 16px;
+  font-weight: 400;
+}
+.check-list li strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 2px; }
+
+/* ============ CONVERT A→B ============ */
+.convert-section { max-width: 1400px; margin: 0 auto; padding: 80px 36px; border-bottom: 1px solid var(--rule); }
+.convert-intro {
+  background: linear-gradient(180deg, var(--sand) 0%, var(--paper) 60%);
+  border: 1px solid var(--rule);
+  padding: 28px 32px;
+  margin: 24px 0 36px;
+}
+.convert-intro p {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  font-weight: 300;
+  max-width: 900px;
+}
+.convert-intro p strong { color: var(--ink); font-weight: 500; }
+
+.gate-timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 40px;
+}
+.gate-timeline::before {
+  content: '';
+  position: absolute;
+  left: 13px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  background: var(--rule);
+}
+.gate-item {
+  position: relative;
+  padding-bottom: 36px;
+}
+.gate-item::before {
+  content: counter(gate-counter, decimal-leading-zero);
+  counter-increment: gate-counter;
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background: var(--terracotta);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--paper);
+  box-shadow: 0 0 0 2px var(--terracotta);
+}
+.gate-timeline { counter-reset: gate-counter; }
+.gate-when {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 4px;
+}
+.gate-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.gate-body {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+.gate-criteria {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 14px 18px;
+  margin-top: 8px;
+  border-left: 3px solid var(--sage);
+}
+.gate-criteria-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.gate-criteria ul { list-style: none; padding: 0; margin: 0; }
+.gate-criteria ul li {
+  font-size: 13px;
+  color: var(--ink-2);
+  padding: 4px 0 4px 18px;
+  position: relative;
+  line-height: 1.5;
+}
+.gate-criteria ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--sage);
+  font-weight: 700;
+}
+
+.cost-band {
+  background: var(--ink);
+  color: var(--sand);
+  padding: 32px 36px;
+  margin: 40px 0;
+}
+.cost-band-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 14px;
+}
+.cost-band-title {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--sand);
+}
+.cost-band-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 16px;
+}
+.cost-block .cb-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 6px;
+}
+.cost-block .cb-value {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+.cost-block .cb-sub {
+  font-size: 12px;
+  color: var(--sand-2);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* ============ RISKS ============ */
+.risks-section { max-width: 1400px; margin: 0 auto; padding: 80px 36px; border-bottom: 1px solid var(--rule); }
+.risks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
+.risk-card {
+  border: 1px solid var(--rule);
+  padding: 22px 24px;
+  background: var(--paper);
+  display: flex;
+  gap: 16px;
+}
+.risk-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  padding: 5px 10px;
+  height: fit-content;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.risk-h { background: var(--neg); color: var(--paper); }
+.risk-m { background: var(--warn); color: var(--paper); }
+.risk-l { background: var(--sage); color: var(--paper); }
+.risk-body { flex: 1; }
+.risk-title { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 500; margin-bottom: 6px; line-height: 1.25; }
+.risk-mit { font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+.risk-mit strong { color: var(--ink); font-weight: 600; }
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--ink);
+  color: var(--sand);
+  padding: 56px 36px 36px;
+}
+.footer-inner { max-width: 1400px; margin: 0 auto; }
+.footer h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+.footer p { color: var(--sand-2); font-size: 13px; line-height: 1.6; }
+.footer-cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+.footer-sources { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-3); line-height: 1.85; }
+.footer-rule { border-top: 1px solid var(--ink-2); padding-top: 24px; }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
+
+/* ============ SECTION ANCHORS ============ */
+.section-header {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  margin-bottom: 36px;
+  align-items: baseline;
+}
+.section-header h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.section-header h2 em { font-style: italic; color: var(--terracotta); font-weight: 300; }
+.section-header .deck {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  font-weight: 300;
+  max-width: 760px;
+}
+
+/* ============ MOBILE ============ */
+@media (max-width: 1100px) {
+  .business-grid { grid-template-columns: 1fr; }
+  .business-panel.wellness { border-right: none; border-bottom: 1px solid var(--ink); }
+  .path-grid { grid-template-columns: 1fr; }
+  .capital-reality { grid-template-columns: 1fr; gap: 20px; }
+  .decision-grid { grid-template-columns: 1fr; }
+  .therapeutic-grid { grid-template-columns: 1fr; }
+  .checklist-grid { grid-template-columns: 1fr; }
+  .market-stats { grid-template-columns: 1fr 1fr; }
+  .cost-band-grid { grid-template-columns: 1fr; gap: 20px; }
+  .submarket-body { grid-template-columns: 1fr; }
+  .sm-top3 { border-right: none; border-bottom: 1px solid var(--rule); }
+}
+@media (max-width: 768px) {
+  .hero { padding: 48px 24px 32px; }
+  .landscape, .paths-section, .risks-section, .competitive-section, .raise-section, .convert-section { padding: 56px 24px; }
+  .decision-section { padding: 48px 24px; }
+  .landscape-header, .paths-header, .section-header { grid-template-columns: 1fr; gap: 8px; }
+  .risks-grid { grid-template-columns: 1fr; }
+  .synergy-band { grid-template-columns: 1fr; gap: 12px; padding: 24px; }
+  .compare-table { font-size: 11px; }
+  .compare-table td, .compare-table th { padding: 8px 10px; }
+  .hero-meta-row { gap: 24px; }
+  .footer-cols { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 6px; }
+  .market-stats { grid-template-columns: 1fr; }
+  .market-stat { border-right: none; border-bottom: 1px solid var(--rule); }
+  .market-stat:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ MASTHEAD ============ -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-title">Phoenix <em>Integrated</em> Health Platform</div>
+    <div class="masthead-meta">
+      <span class="dot"></span>
+      <span>Founder Brief · v1</span>
+      <span class="stamp">Confidential</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NAV ============ -->
+<nav class="section-nav">
+  <div class="nav-inner">
+    <button class="nav-btn active" data-target="overview"><span class="num">01</span>Overview</button>
+    <button class="nav-btn" data-target="landscape"><span class="num">02</span>Business Landscape</button>
+    <button class="nav-btn" data-target="competitive"><span class="num">03</span>Competitive Landscape</button>
+    <button class="nav-btn" data-target="paths"><span class="num">04</span>Three Paths</button>
+    <button class="nav-btn" data-target="compare"><span class="num">05</span>Side-by-Side</button>
+    <button class="nav-btn" data-target="decision"><span class="num">06</span>Decision Guide</button>
+    <button class="nav-btn" data-target="raise"><span class="num">07</span>Year-2 Raise</button>
+    <button class="nav-btn" data-target="convert"><span class="num">08</span>Convert A→B</button>
+    <button class="nav-btn" data-target="risks"><span class="num">09</span>Risks</button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="overview">
+  <div class="hero-eyebrow">Phoenix metro · greater East Valley focus</div>
+  <h1>Two businesses. One <em>operating framework.</em> One $500K starting envelope.</h1>
+  <p class="lede">A physician-led health platform combining a concierge wellness practice with a clinical research engine. The wellness side generates the cash flow and patient panel; the research side converts that panel into a second revenue line with structurally different economics. At a sub-$500K capital reality, the question is no longer <em>whether</em> to build both — it's <em>which one to lead with.</em></p>
+
+  <div class="hero-meta-row">
+    <div class="hero-meta">
+      <span class="label">Capital Envelope</span>
+      <span class="value">Under $500K</span>
+    </div>
+    <div class="hero-meta">
+      <span class="label">Recommended Market</span>
+      <span class="value">Gilbert · SE Mesa</span>
+    </div>
+    <div class="hero-meta">
+      <span class="label">Decision Window</span>
+      <span class="value">Before Lease LOI</span>
+    </div>
+    <div class="hero-meta">
+      <span class="label">Document Version</span>
+      <span class="value">v1</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 02 — DUAL BUSINESS LANDSCAPE ============ -->
+<section class="landscape" id="landscape">
+  <div class="landscape-header">
+    <div class="section-num">§ 02 · Landscape</div>
+    <div>
+      <h2>The <em>two businesses,</em> at a glance.</h2>
+      <p class="landscape-deck">Read this page before reading anything else. Each side is its own line of business with its own customer, cash-flow profile, capital requirement, and exit path. They share founders, facility, and infrastructure — but they're scored, staffed, and sold differently. The synergy band between them is where the integrated thesis lives.</p>
+    </div>
+  </div>
+
+  <div class="business-grid">
+
+    <!-- WELLNESS PANEL -->
+    <div class="business-panel wellness">
+      <span class="biz-tag wellness">Business 01</span>
+      <h3 class="biz-title">Wellness, Concierge & <em>Longevity Practice</em></h3>
+      <p class="biz-tagline">A physician-led, membership-driven practice combining concierge primary care, behavioral health, functional medicine, and longevity programming under one operating brand.</p>
+
+      <div class="biz-stat-row">
+        <div class="biz-stat">
+          <div class="biz-stat-label">Revenue Model</div>
+          <div class="biz-stat-value">Membership</div>
+          <div class="biz-stat-sub">Recurring + ancillary, self-pay</div>
+        </div>
+        <div class="biz-stat">
+          <div class="biz-stat-label">Mature EBITDA</div>
+          <div class="biz-stat-value">22–28%</div>
+          <div class="biz-stat-sub">Industry standard for concierge</div>
+        </div>
+        <div class="biz-stat">
+          <div class="biz-stat-label">Customer</div>
+          <div class="biz-stat-value">Patient</div>
+          <div class="biz-stat-sub">Affluent 45+, snowbirds, executives</div>
+        </div>
+        <div class="biz-stat">
+          <div class="biz-stat-label">Exit Multiple</div>
+          <div class="biz-stat-value">3.5–5x</div>
+          <div class="biz-stat-sub">EBITDA · regional roll-up market</div>
+        </div>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">The three product tiers</div>
+        <ul class="biz-list">
+          <li><span class="li-label">Tier 1 · Foundation IM concierge</span><span class="li-value">$2,400/yr</span></li>
+          <li><span class="li-label">Tier 2 · Functional + behavioral</span><span class="li-value">$5,800/yr</span></li>
+          <li><span class="li-label">Tier 3 · Executive longevity</span><span class="li-value">$10,500/yr</span></li>
+        </ul>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">Revenue streams (mature)</div>
+        <ul class="biz-list">
+          <li><span class="li-label">Membership fees</span><span class="li-value">~60%</span></li>
+          <li><span class="li-label">Ancillary clinical (labs, peptides, hormones, GLP-1)</span><span class="li-value">~25%</span></li>
+          <li><span class="li-label">In-house services (IV, cognitive, executive physical)</span><span class="li-value">~10%</span></li>
+          <li><span class="li-label">Dispensary + supplements</span><span class="li-value">~5%</span></li>
+        </ul>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">Service portfolio</div>
+        <div class="pill-row">
+          <span class="pill wellness">Concierge IM</span>
+          <span class="pill wellness">Geriatrics</span>
+          <span class="pill wellness">Psychiatry</span>
+          <span class="pill wellness">Functional Med</span>
+          <span class="pill wellness">Hormone Opt</span>
+          <span class="pill wellness">Longevity</span>
+          <span class="pill wellness">Cognitive Assessment</span>
+          <span class="pill wellness">GLP-1 / Weight</span>
+          <span class="pill wellness">IV Therapy</span>
+          <span class="pill wellness">Peptides</span>
+          <span class="pill wellness">Executive Physical</span>
+        </div>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">Clinical leadership</div>
+        <p>The founding physician anchors clinical: Internal Medicine, Geriatrics, cognitive health, longevity programming. The founding PMHNP anchors behavioral health integration, medication management, and lifestyle medicine — woven through every tier, not siloed as a separate service line.</p>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">Phoenix competitive read</div>
+        <p>Saturated in Scottsdale. Under-served east of Loop 202. <strong>No competitor in Phoenix metro combines MD-led concierge IM, PMHNP-integrated behavioral health, geriatric specialization, and a research arm under one entity.</strong> Full landscape in §03.</p>
+      </div>
+    </div>
+
+    <!-- RESEARCH PANEL -->
+    <div class="business-panel research">
+      <span class="biz-tag research">Business 02</span>
+      <h3 class="biz-title">Embedded Multi-Specialty <em>Clinical Research</em></h3>
+      <p class="biz-tagline">A commercial clinical research site focused on psychiatry, geriatrics, metabolic disease, and the Alzheimer's spectrum — funded by pharmaceutical sponsors, supported by the wellness panel as a low-friction recruitment funnel.</p>
+
+      <div class="biz-stat-row">
+        <div class="biz-stat">
+          <div class="biz-stat-label">Revenue Model</div>
+          <div class="biz-stat-value">Per-patient</div>
+          <div class="biz-stat-sub">Sponsor-funded, milestone-based</div>
+        </div>
+        <div class="biz-stat">
+          <div class="biz-stat-label">Mature EBITDA</div>
+          <div class="biz-stat-value">25–50%</div>
+          <div class="biz-stat-sub">Fixed cost base; revenue scales</div>
+        </div>
+        <div class="biz-stat">
+          <div class="biz-stat-label">Customer</div>
+          <div class="biz-stat-value">Sponsor / CRO</div>
+          <div class="biz-stat-sub">Pharma + biotech + device</div>
+        </div>
+        <div class="biz-stat">
+          <div class="biz-stat-label">Exit Multiple</div>
+          <div class="biz-stat-value">4–9x</div>
+          <div class="biz-stat-sub">EBITDA · active PE roll-up market</div>
+        </div>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">Revenue per trial type</div>
+        <ul class="biz-list">
+          <li><span class="li-label">Mild MDD / GAD / mixed anxiety-depression</span><span class="li-value">$5K–$15K/pt</span></li>
+          <li><span class="li-label">Prevention / Early AD / MCI</span><span class="li-value">$10K–$25K/pt</span></li>
+          <li><span class="li-label">Moderate AD (agitation, behavioral)</span><span class="li-value">$8K–$18K/pt</span></li>
+          <li><span class="li-label">GLP-1 / metabolic / obesity</span><span class="li-value">$3K–$8K/pt</span></li>
+          <li><span class="li-label">Women's health / menopause / PMDD</span><span class="li-value">$3.5K–$8K/pt</span></li>
+          <li><span class="li-label">Insomnia / sleep / postpartum depression</span><span class="li-value">$4K–$10K/pt</span></li>
+          <li><span class="li-label">Real-world evidence / registry</span><span class="li-value">$500–$3K/pt</span></li>
+        </ul>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">Site economics (at scale)</div>
+        <ul class="biz-list">
+          <li><span class="li-label">Revenue per active study</span><span class="li-value">~$260K avg</span></li>
+          <li><span class="li-label">Breakeven concurrent studies</span><span class="li-value">3 active</span></li>
+          <li><span class="li-label">Healthy site capacity</span><span class="li-value">4–8 active</span></li>
+          <li><span class="li-label">Sponsor pipeline target</span><span class="li-value">6+ active conversations</span></li>
+        </ul>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">Therapeutic focus (Year 1–2)</div>
+        <div class="pill-row">
+          <span class="pill research">Mild MDD</span>
+          <span class="pill research">GAD</span>
+          <span class="pill research">Geriatric Psychiatry</span>
+          <span class="pill research">Prevention / Early AD</span>
+          <span class="pill research">MCI</span>
+          <span class="pill research">Moderate AD</span>
+          <span class="pill research">Insomnia</span>
+          <span class="pill research">PMDD / Menopause</span>
+          <span class="pill research">GLP-1 / Metabolic</span>
+          <span class="pill research">Obesity</span>
+          <span class="pill research">Postpartum Depression</span>
+          <span class="pill research">Real-World Evidence</span>
+        </div>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">Research leadership</div>
+        <p>The founding physician serves as Principal Investigator on IM, geriatric, metabolic, and Alzheimer's-spectrum trials. The founding PMHNP serves as PI or sub-investigator on psychiatric, women's health, and behavioral trials (the PMHNP credential is critical and unlocks a wider trial portfolio than IM alone). A <strong>Clinical Research Coordinator</strong> (CRC) is the most important early hire — running day-to-day operations, regulatory submissions, and sponsor relationships.</p>
+      </div>
+
+      <div class="biz-section">
+        <div class="biz-section-label">Phoenix competitive read</div>
+        <p>Academic giants dominate the headline space. Commercial site landscape is fragmented, growing, and demonstrably fundable. Phoenix metro is a top-five US cluster for Alzheimer's, geriatric, and CNS trials. Full landscape in §03.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Synergy band linking the two -->
+  <div class="synergy-band">
+    <div class="synergy-label">The Synergy<br>↓ Between Them</div>
+    <div class="synergy-text">
+      The wellness panel becomes the <strong>lowest-cost recruitment funnel</strong> a research site can operate. Industry sponsor recruitment costs run <strong>$1,500–$5,000 per enrolled patient</strong>; pulling from a pre-engaged panel cuts that to coordinator time alone — call it <strong>$200–$400 per enrolled patient</strong>. The research affiliation lifts wellness brand credibility in the longevity tier. Shared facility, EMR, and front-office overhead deliver $95K–$140K of annual cost avoidance vs. running two separate operations. <strong>This is the integration thesis in one paragraph.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 03 — COMPETITIVE LANDSCAPE DEEP DIVE ============ -->
+<section class="competitive-section" id="competitive">
+  <div class="section-header">
+    <div class="section-num">§ 03 · Competitive Landscape</div>
+    <div>
+      <h2>Two separate <em>competitive maps.</em> Different operators, different threats.</h2>
+      <p class="deck">The wellness map shows where memberships compete; the research map shows where sponsor dollars and PI talent compete. They overlap in zero competitors. Use the toggle to flip between the two views.</p>
+    </div>
+  </div>
+
+  <div class="comp-toggle" role="tablist">
+    <button class="comp-toggle-btn active" data-comp="wellness-comp">Wellness · By Submarket <span class="ct-count">5 submarkets</span></button>
+    <button class="comp-toggle-btn" data-comp="research-comp">Research Competitors <span class="ct-count">12 operators</span></button>
+  </div>
+
+  <div class="comp-panel">
+
+    <!-- WELLNESS COMPETITORS -->
+    <div class="comp-tab-content active" id="wellness-comp">
+      <div class="market-stats">
+        <div class="market-stat">
+          <div class="ms-label">Submarkets analyzed</div>
+          <div class="ms-value">5</div>
+          <div class="ms-sub">Scottsdale, Mesa, Gilbert, Chandler, Tempe</div>
+        </div>
+        <div class="market-stat">
+          <div class="ms-label">Total wellness operators surveyed</div>
+          <div class="ms-value">42+</div>
+          <div class="ms-sub">Across all five submarkets</div>
+        </div>
+        <div class="market-stat">
+          <div class="ms-label">Median concierge fee · Phoenix metro</div>
+          <div class="ms-value">$2,500–$4,000</div>
+          <div class="ms-sub">Tier 1; premium ranges $10K–$30K+</div>
+        </div>
+        <div class="market-stat">
+          <div class="ms-label">Operators combining IM + PMHNP + research</div>
+          <div class="ms-value">0</div>
+          <div class="ms-sub">In any submarket. This is the white space.</div>
+        </div>
+      </div>
+
+      <h3 style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 500; margin: 36px 0 8px; letter-spacing: -0.015em;">Submarket-by-submarket breakdown</h3>
+      <p style="font-family: 'Fraunces', serif; font-size: 16px; color: var(--ink-2); font-weight: 300; line-height: 1.5; max-width: 820px; margin-bottom: 18px;">Each submarket gets its own competitor count, top 3 practices, and ownership-type market-share breakdown. The breakdown allocates the local share of identified wellness-category operators by ownership model. Read the East Valley markets (Gilbert, SE Mesa, Chandler) as the actionable competitive set; Scottsdale is shown for benchmarking and is not the target market.</p>
+
+      <div class="submarket-stack">
+
+        <!-- GILBERT -->
+        <div class="submarket-block target">
+          <div class="submarket-banner">
+            <div class="sm-banner-left">
+              <span class="sm-name">Gilbert</span>
+              <span class="sm-target-tag">Primary target submarket</span>
+            </div>
+            <div class="sm-meta">
+              <span>Wellness operators · <span class="sm-meta-num">7</span></span>
+              <span>Median HH income · <span class="sm-meta-num">$112K</span></span>
+              <span>65+ population · <span class="sm-meta-num">~9%</span></span>
+            </div>
+          </div>
+          <div class="submarket-body">
+            <div class="sm-top3">
+              <div class="sm-section-label">Top 3 practices · Gilbert</div>
+              <div class="provider-card">
+                <div><span class="provider-rank">01</span><span class="provider-name">The Wellness Connection</span></div>
+                <div class="provider-meta">Concierge · APP-led · Gilbert / Mesa</div>
+                <div class="provider-desc">NP-led concierge practice with rapid-access positioning, urgent care overlap, and an active social media presence. Strong consumer brand; limited longevity or behavioral depth.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">02</span><span class="provider-name">Performance Health AZ</span></div>
+                <div class="provider-meta">DPC + functional · Physician · Gilbert / Chandler / Queen Creek</div>
+                <div class="provider-desc">Direct primary care with functional and lifestyle medicine layer. Hormone, IV, supplement-driven model. Strong founder-led brand; small panel; no research, no PMHNP integration.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">03</span><span class="provider-name">Gilbert Integrative Medical Center</span></div>
+                <div class="provider-meta">Functional / integrative · Physician · Gilbert</div>
+                <div class="provider-desc">Physician-led functional medicine, diabetes and chronic-disease focus, root-cause positioning. No formal concierge tier; no behavioral health; no research arm.</div>
+              </div>
+            </div>
+            <div class="sm-ownership">
+              <div class="sm-section-label">Market share by ownership type</div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Physician-led concierge / functional</span><span class="ownership-pct">42%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-physician" style="width:42%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">APP-led (NP / PA)</span><span class="ownership-pct">28%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-app" style="width:28%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Naturopathic / ND-led</span><span class="ownership-pct">15%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-naturopath" style="width:15%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Mobile / house-call</span><span class="ownership-pct">10%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-mobile" style="width:10%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Corporate / network (One Medical et al.)</span><span class="ownership-pct">5%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-corporate" style="width:5%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-summary">
+            <strong>Gilbert read:</strong> Fragmented competitive set, no dominant operator above 15% share. The top three command roughly 35% of the local market combined; the long tail is small naturopathic and APP-led practices serving niche needs. <strong>No MD-led concierge + PMHNP + research entity exists.</strong> Population growth, household income, and SR-202 access make this the strongest dual-purpose target.
+          </div>
+        </div>
+
+        <!-- SE MESA -->
+        <div class="submarket-block target">
+          <div class="submarket-banner">
+            <div class="sm-banner-left">
+              <span class="sm-name">SE Mesa</span>
+              <span class="sm-target-tag">Secondary target / co-flagship candidate</span>
+            </div>
+            <div class="sm-meta">
+              <span>Wellness operators · <span class="sm-meta-num">9</span></span>
+              <span>Median HH income · <span class="sm-meta-num">$78K</span></span>
+              <span>65+ population · <span class="sm-meta-num">~17%</span></span>
+            </div>
+          </div>
+          <div class="submarket-body">
+            <div class="sm-top3">
+              <div class="sm-section-label">Top 3 practices · SE Mesa</div>
+              <div class="provider-card">
+                <div><span class="provider-rank">01</span><span class="provider-name">Phoenix Family & Geriatric Medicine</span></div>
+                <div class="provider-meta">Concierge + geriatrics · Physician · Mesa / Gilbert / Chandler service area</div>
+                <div class="provider-desc">Harvard-trained concierge geriatric physician serving East Valley. Functional + naturopathic services available. <strong>Closest credentialing comparable</strong> in the geriatric concierge lane. No PMHNP integration; no research.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">02</span><span class="provider-name">Rose Canyon Health & Wellness</span></div>
+                <div class="provider-meta">Functional / integrative · APP-led · Mesa</div>
+                <div class="provider-desc">Holistic family-oriented integrative model. Functional medicine framing; broad service mix. APP-led; no behavioral health specialization; no longevity tier.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">03</span><span class="provider-name">MVP Medical Care</span></div>
+                <div class="provider-meta">Functional + brain health · Physician · Mesa</div>
+                <div class="provider-desc">Board-certified integrative family practitioner with MeRT brain therapy, microcurrent, and chronic-disease focus. Adjacent to behavioral health but not psychiatric. No formal concierge tier.</div>
+              </div>
+            </div>
+            <div class="sm-ownership">
+              <div class="sm-section-label">Market share by ownership type</div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Physician-led concierge / functional</span><span class="ownership-pct">38%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-physician" style="width:38%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Naturopathic / ND-led</span><span class="ownership-pct">25%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-naturopath" style="width:25%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">APP-led (NP / PA)</span><span class="ownership-pct">22%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-app" style="width:22%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Corporate / network</span><span class="ownership-pct">10%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-corporate" style="width:10%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Mobile / house-call</span><span class="ownership-pct">5%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-mobile" style="width:5%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-summary">
+            <strong>SE Mesa read:</strong> Larger 65+ population than Gilbert (driven by Sun Lakes, retirement-community adjacency, and aging-in-place trends) but lower median household income — which compresses Tier 3 longevity willingness-to-pay. Stronger naturopathic competition. <strong>The geriatric concierge lane has one named competitor</strong> (Phoenix Family & Geriatric Medicine), which is both an opportunity and a credibility-validation signal.
+          </div>
+        </div>
+
+        <!-- CHANDLER -->
+        <div class="submarket-block">
+          <div class="submarket-banner">
+            <div class="sm-banner-left">
+              <span class="sm-name">Chandler</span>
+            </div>
+            <div class="sm-meta">
+              <span>Wellness operators · <span class="sm-meta-num">8</span></span>
+              <span>Median HH income · <span class="sm-meta-num">$108K</span></span>
+              <span>65+ population · <span class="sm-meta-num">~12%</span></span>
+            </div>
+          </div>
+          <div class="submarket-body">
+            <div class="sm-top3">
+              <div class="sm-section-label">Top 3 practices · Chandler</div>
+              <div class="provider-card">
+                <div><span class="provider-rank">01</span><span class="provider-name">Performance Health AZ (Chandler)</span></div>
+                <div class="provider-meta">DPC + functional · Physician · Chandler / Gilbert</div>
+                <div class="provider-desc">Same operator as Gilbert top-3. Concierge-style DPC with functional medicine, hormones, and IV. Smaller footprint than Scottsdale players; targeted patient profile.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">02</span><span class="provider-name">One Medical · SanTan Village</span></div>
+                <div class="provider-meta">Corporate concierge-lite · Network · Chandler</div>
+                <div class="provider-desc">Amazon-owned primary care network with concierge-lite positioning at lower price point ($199/yr Prime member rate). Tech-forward, transactional; not direct competition for premium tiers but consumes top-of-funnel.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">03</span><span class="provider-name">Hummingbird Health DPC</span></div>
+                <div class="provider-meta">Direct primary care · Physician · Mesa / Chandler service area</div>
+                <div class="provider-desc">DPC model with concierge-style positioning. Cash-pay, smaller panel. No behavioral health integration; no research; no longevity tier above standard primary care.</div>
+              </div>
+            </div>
+            <div class="sm-ownership">
+              <div class="sm-section-label">Market share by ownership type</div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Physician-led concierge / DPC</span><span class="ownership-pct">35%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-physician" style="width:35%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Corporate / network (One Medical, Banner)</span><span class="ownership-pct">25%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-corporate" style="width:25%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">APP-led (NP / PA)</span><span class="ownership-pct">22%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-app" style="width:22%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Naturopathic / ND-led</span><span class="ownership-pct">12%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-naturopath" style="width:12%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Mobile / house-call</span><span class="ownership-pct">6%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-mobile" style="width:6%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-summary">
+            <strong>Chandler read:</strong> Higher corporate penetration than Gilbert or Mesa (One Medical, Banner-owned primary care). Strong household economics support a premium concierge tier, but the corporate networks are absorbing the entry-level concierge demand. <strong>Best-in-class for executive longevity Tier 3 buyers; weaker for the lower tiers</strong> where corporate competition is intense.
+          </div>
+        </div>
+
+        <!-- SCOTTSDALE (Reference / Benchmark) -->
+        <div class="submarket-block">
+          <div class="submarket-banner">
+            <div class="sm-banner-left">
+              <span class="sm-name">Scottsdale</span>
+            </div>
+            <div class="sm-meta">
+              <span>Wellness operators · <span class="sm-meta-num">14</span></span>
+              <span>Median HH income · <span class="sm-meta-num">$111K</span></span>
+              <span>65+ population · <span class="sm-meta-num">~26%</span></span>
+            </div>
+          </div>
+          <div class="submarket-body">
+            <div class="sm-top3">
+              <div class="sm-section-label">Top 3 practices · Scottsdale</div>
+              <div class="provider-card">
+                <div><span class="provider-rank">01</span><span class="provider-name">MD² Scottsdale</span></div>
+                <div class="provider-meta">True retainer concierge · Physician · McCormick Ranch · Opened Feb 2026</div>
+                <div class="provider-desc">Ultra-luxury national concierge brand (MD²) launching its Scottsdale outpost. Capped panel (~50 patients per MD), nephrology + endocrinology pedigree. <strong>Sets the upper price ceiling</strong> at $10K–$30K+ annually.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">02</span><span class="provider-name">Scottsdale Private Physicians</span></div>
+                <div class="provider-meta">Concierge + executive physical · Physician · Scottsdale</div>
+                <div class="provider-desc">Established mid-to-premium concierge brand. Executive physical specialization; snowbird-friendly. The most direct comparable to the proposed Tier 2/3 offering but Scottsdale-only.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">03</span><span class="provider-name">NuGen Medicine</span></div>
+                <div class="provider-meta">Mid-market concierge · Physician · Scottsdale</div>
+                <div class="provider-desc">"Accessible concierge" pricing ($2K–$5K/yr) with internist-led care. Sets the price floor for the Scottsdale concierge market and benchmarks the lowest defensible price point for any wellness practice in the metro.</div>
+              </div>
+            </div>
+            <div class="sm-ownership">
+              <div class="sm-section-label">Market share by ownership type</div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Physician-led concierge / functional</span><span class="ownership-pct">52%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-physician" style="width:52%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">APP-led longevity / hormone</span><span class="ownership-pct">18%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-app" style="width:18%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Naturopathic / ND-led</span><span class="ownership-pct">12%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-naturopath" style="width:12%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Wellness + aesthetic hybrid</span><span class="ownership-pct">10%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-aesthetic" style="width:10%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Mobile / house-call</span><span class="ownership-pct">5%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-mobile" style="width:5%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Corporate / network</span><span class="ownership-pct">3%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-corporate" style="width:3%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-summary">
+            <strong>Scottsdale read:</strong> Most saturated submarket in metro. Physician-led concierge dominates (52% share). Premium pricing ceiling is the highest in the metro but so is competitive intensity. Listed here for benchmarking, not as a target — the rent premium, marketing cost, and brand-building required to win here against entrenched competitors make it inappropriate for a $500K launch.
+          </div>
+        </div>
+
+        <!-- TEMPE -->
+        <div class="submarket-block">
+          <div class="submarket-banner">
+            <div class="sm-banner-left">
+              <span class="sm-name">Tempe</span>
+            </div>
+            <div class="sm-meta">
+              <span>Wellness operators · <span class="sm-meta-num">4</span></span>
+              <span>Median HH income · <span class="sm-meta-num">$72K</span></span>
+              <span>65+ population · <span class="sm-meta-num">~9%</span></span>
+            </div>
+          </div>
+          <div class="submarket-body">
+            <div class="sm-top3">
+              <div class="sm-section-label">Top 3 practices · Tempe</div>
+              <div class="provider-card">
+                <div><span class="provider-rank">01</span><span class="provider-name">Tempe-area One Medical</span></div>
+                <div class="provider-meta">Corporate concierge-lite · Network · Tempe</div>
+                <div class="provider-desc">Network primary care with tech-forward concierge-lite positioning. Captures the younger, professional ASU-adjacent demographic. Not a direct competitor for premium concierge or longevity.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">02</span><span class="provider-name">Local functional medicine APPs</span></div>
+                <div class="provider-meta">Functional · APP-led · Tempe</div>
+                <div class="provider-desc">Fragmented small APP-led functional practices serving the younger Tempe demographic with hormones, IV, and wellness packages. Low concierge penetration.</div>
+              </div>
+              <div class="provider-card">
+                <div><span class="provider-rank">03</span><span class="provider-name">University-adjacent primary care</span></div>
+                <div class="provider-meta">Traditional + concierge tier · Various</div>
+                <div class="provider-desc">Several traditional practices with light concierge tiers attached. Not specialized in longevity, geriatric, or behavioral wellness. Demographic mismatch with proposed Tier 2/3.</div>
+              </div>
+            </div>
+            <div class="sm-ownership">
+              <div class="sm-section-label">Market share by ownership type</div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Corporate / network</span><span class="ownership-pct">40%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-corporate" style="width:40%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">APP-led functional / wellness</span><span class="ownership-pct">30%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-app" style="width:30%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Physician-led concierge</span><span class="ownership-pct">18%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-physician" style="width:18%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Naturopathic / ND-led</span><span class="ownership-pct">10%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-naturopath" style="width:10%"></div></div>
+              </div>
+              <div class="ownership-row">
+                <div class="ownership-label-row"><span class="ownership-label">Mobile / house-call</span><span class="ownership-pct">2%</span></div>
+                <div class="ownership-bar"><div class="ownership-fill fill-mobile" style="width:2%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-summary">
+            <strong>Tempe read:</strong> Demographic mismatch. Younger population (median age 28 vs. metro 38) and lower household income compress willingness-to-pay for premium concierge and longevity programs. Corporate networks dominate the local concierge-lite category. <strong>Not recommended as a target submarket</strong> for the proposed model.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="takeaway-band">
+        <div class="takeaway-band-label">Wellness landscape takeaway · the East Valley advantage</div>
+        <p>Across the five submarkets surveyed, <strong>Gilbert has the most favorable competitive geometry</strong> for the proposed framework: 7 total wellness operators, fragmented ownership with no dominant operator above 15% share, household income sufficient to support all three pricing tiers, and zero competitors combining MD-led concierge, PMHNP behavioral integration, and a research arm. SE Mesa offers a complementary 65+ demographic with one credentialing-comparable geriatric concierge already operating. Chandler is corporate-saturated at the lower tiers but viable for Tier 3 executive longevity. Scottsdale is benchmarking-only; Tempe is out-of-fit.</p>
+      </div>
+    </div>
+
+    <!-- RESEARCH COMPETITORS -->
+    <div class="comp-tab-content" id="research-comp">
+      <div class="market-stats">
+        <div class="market-stat">
+          <div class="ms-label">Research sites surveyed</div>
+          <div class="ms-value">12</div>
+          <div class="ms-sub">Academic, commercial, and network</div>
+        </div>
+        <div class="market-stat">
+          <div class="ms-label">Phoenix metro ranking · AD research</div>
+          <div class="ms-value">Top 5</div>
+          <div class="ms-sub">US cluster (Banner, Mayo, Barrow, TGen)</div>
+        </div>
+        <div class="market-stat">
+          <div class="ms-label">Active AZ clinical trial listings</div>
+          <div class="ms-value">1,200+</div>
+          <div class="ms-sub">CenterWatch · Chandler alone shows 1,217</div>
+        </div>
+        <div class="market-stat">
+          <div class="ms-label">Commercial sites in E. Valley</div>
+          <div class="ms-value">5+</div>
+          <div class="ms-sub">Validates lane; defines competitive set</div>
+        </div>
+      </div>
+
+      <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 500; margin: 28px 0 14px; letter-spacing: -0.012em;">Academic & institutional anchors</h3>
+      <div class="comp-table-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Site</th>
+              <th style="width: 14%;">Location</th>
+              <th style="width: 13%;">Type</th>
+              <th style="width: 21%;">Therapeutic focus</th>
+              <th style="width: 30%;">Competitive read</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name-cell"><strong>Banner Alzheimer's Institute</strong></td>
+              <td>Phoenix Biomedical Campus</td>
+              <td><div class="tag-row"><span class="mini-tag t-academic">Academic</span></div></td>
+              <td>Prevention, early AD, MCI, brain imaging, neurodegeneration</td>
+              <td>World-class. <strong>Do not compete head-to-head</strong>; consider downstream referral partnership for ineligible patients.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>Banner Sun Health Research Institute</strong></td>
+              <td>Sun City</td>
+              <td><div class="tag-row"><span class="mini-tag t-academic">Academic</span></div></td>
+              <td>Aging diseases, dementia, brain donor program</td>
+              <td>Owns the 65+ Sun City corridor. Reinforces the case for East Valley positioning to avoid direct overlap.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>Barrow Neurological Institute</strong></td>
+              <td>Central Phoenix (St. Joseph's)</td>
+              <td><div class="tag-row"><span class="mini-tag t-academic">Academic</span></div></td>
+              <td>Neurology, neurosurgery, AD trials, MS, Parkinson's</td>
+              <td>Academic anchor. Not a peer competitor for an independent commercial site; defines local PI talent pool.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>Mayo Clinic Arizona</strong></td>
+              <td>North Phoenix</td>
+              <td><div class="tag-row"><span class="mini-tag t-academic">Academic</span></div></td>
+              <td>Multi-therapeutic, ADRC affiliate, oncology, neurology</td>
+              <td>Captures the most prestigious sponsor work; slow on contracting — commercial sites win on speed.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>TGen (Translational Genomics)</strong></td>
+              <td>Phoenix Bioscience Core</td>
+              <td><div class="tag-row"><span class="mini-tag t-academic">Academic</span></div></td>
+              <td>Genomics, AD biomarkers, single-cell analysis</td>
+              <td>Translational research, not a clinical trial competitor. Potential collaborator for biomarker substudies.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>U of Arizona College of Medicine — Phoenix (Psychiatry)</strong></td>
+              <td>Downtown Phoenix Biomedical</td>
+              <td><div class="tag-row"><span class="mini-tag t-academic">Academic</span></div></td>
+              <td>150+ psychiatry faculty across mood disorders, anxiety, depression, AD</td>
+              <td>Defines the academic psychiatry pipeline. Source for PI consulting/sub-investigator partnerships.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-family: 'Fraunces', serif; font-size: 22px; font-weight: 500; margin: 32px 0 14px; letter-spacing: -0.012em;">Commercial sites & networks — direct competitive set</h3>
+      <div class="comp-table-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Site</th>
+              <th style="width: 14%;">Location</th>
+              <th style="width: 13%;">Type</th>
+              <th style="width: 21%;">Therapeutic focus</th>
+              <th style="width: 30%;">Competitive read</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name-cell"><strong>Chandler Clinical Trials</strong><span class="sub">Elite Clinical Network member</span></td>
+              <td>Chandler · 255 S Dobson</td>
+              <td><div class="tag-row"><span class="mini-tag t-commercial">Commercial</span></div></td>
+              <td>Multi-specialty, family-practice-anchored, 30,000+ patient base</td>
+              <td><strong>Closest direct comparable.</strong> Validates the embedded-research-in-clinical-practice model in the East Valley. Founders should benchmark feasibility responses against this operator.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>Arizona Clinical Trials / Arizona Liver Health (ACT)</strong></td>
+              <td>Chandler (28K sf medical park), Mesa, Peoria, Tucson, Flagstaff</td>
+              <td><div class="tag-row"><span class="mini-tag t-network">Network</span></div></td>
+              <td>Metabolic, NASH, GLP-1, COVID, obesity, liver, geriatric</td>
+              <td>Mature multi-site operator. <strong>Sets the bar for commercial site quality in metro.</strong> Not directly competitive for psychiatry; overlaps on metabolic.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>Axsendo Clinical Research</strong></td>
+              <td>5 locations across Phoenix metro (Scottsdale, Glendale, Chandler, Mesa, central Phx)</td>
+              <td><div class="tag-row"><span class="mini-tag t-network">Network</span></div></td>
+              <td>Pharma + device, broad therapeutic, decentralized reach</td>
+              <td>Network operator. Reference for what sponsor coverage looks like at scale. Not directly competitive given therapeutic breadth.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>IMA Clinical Research Phoenix</strong></td>
+              <td>Phoenix</td>
+              <td><div class="tag-row"><span class="mini-tag t-commercial">Commercial</span></div></td>
+              <td>Psychiatric & neurologic disorders, smoking cessation, digital therapeutics, device</td>
+              <td><strong>Direct competitor in the psychiatry lane.</strong> Confirms demand is real and category is fundable. Differentiator: PMHNP-led entry vs. their MD-led psychiatry team.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>SGS Clinical Studies</strong></td>
+              <td>Phoenix · 24th & Peoria</td>
+              <td><div class="tag-row"><span class="mini-tag t-commercial">Commercial</span></div></td>
+              <td>Dermatology, cosmetic, consumer health</td>
+              <td>Different therapeutic lane. <strong>Not competitive.</strong> Listed for completeness.</td>
+            </tr>
+            <tr>
+              <td class="name-cell"><strong>Trialmed Phoenix</strong><span class="sub">Established 2019</span></td>
+              <td>Phoenix</td>
+              <td><div class="tag-row"><span class="mini-tag t-commercial">Commercial</span></div></td>
+              <td>Multi-therapeutic phase 2–4 trials</td>
+              <td>Mid-sized commercial site. Not a direct threat; useful as a benchmark for early-stage site economics.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="takeaway-band">
+        <div class="takeaway-band-label">Research landscape takeaway</div>
+        <p>Phoenix metro is a <strong>top-five US market for Alzheimer's, geriatric, and psychiatric trials</strong>. Academic giants own the prestige tier and the largest grants; commercial sites compete on speed, contracting agility, and patient access. The proposed site is <strong>not competing with Banner, Mayo, or Barrow</strong> — it's competing with Chandler Clinical Trials and IMA, with the unique differentiation of a PMHNP credential opening a wider women's health and psychiatric trial portfolio than competing IM-led commercial sites. The integration with an active wellness panel is what makes feasibility responses faster than ACT or Axsendo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Therapeutic Focus Cards -->
+  <div style="margin-top: 56px;">
+    <h3 style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 500; letter-spacing: -0.015em; margin-bottom: 8px;">Therapeutic prioritization · aligned to founder credentials</h3>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 24px;">Which trials the site should pursue, when, and why</div>
+
+    <div class="therapeutic-grid">
+      <div class="therapeutic-card tier-a">
+        <div class="tc-eyebrow">Tier A · Lead with these</div>
+        <div class="tc-title">Geriatric IM + PMHNP credentials unlock these</div>
+        <ul class="tc-list">
+          <li><span>Prevention / Early AD / MCI</span><span class="val">$10K–$25K/pt</span></li>
+          <li><span>Moderate AD (behavioral)</span><span class="val">$8K–$18K/pt</span></li>
+          <li><span>Mild MDD</span><span class="val">$5K–$15K/pt</span></li>
+          <li><span>Generalized Anxiety Disorder</span><span class="val">$5K–$12K/pt</span></li>
+          <li><span>Geriatric depression</span><span class="val">$6K–$14K/pt</span></li>
+          <li><span>Insomnia / sleep disorders</span><span class="val">$4K–$10K/pt</span></li>
+        </ul>
+        <p class="tc-note">This combination is the differentiator. Few Phoenix commercial sites can field both a geriatric IM PI AND a PMHNP credentialed for behavioral health trials. Sponsors actively place AD-spectrum, depression, and anxiety studies in metros with this profile.</p>
+      </div>
+
+      <div class="therapeutic-card tier-b">
+        <div class="tc-eyebrow">Tier B · Add by Year 2</div>
+        <div class="tc-title">Adjacent lucrative categories</div>
+        <ul class="tc-list">
+          <li><span>GLP-1 / Obesity / Metabolic</span><span class="val">$3K–$8K/pt</span></li>
+          <li><span>NASH / Liver / Metabolic</span><span class="val">$5K–$12K/pt</span></li>
+          <li><span>Menopause / HRT</span><span class="val">$3.5K–$8K/pt</span></li>
+          <li><span>PMDD / Women's mood</span><span class="val">$4K–$8K/pt</span></li>
+          <li><span>Postpartum depression</span><span class="val">$5K–$10K/pt</span></li>
+          <li><span>Migraine (chronic / episodic)</span><span class="val">$4K–$9K/pt</span></li>
+          <li><span>Parkinson's (early stage)</span><span class="val">$6K–$15K/pt</span></li>
+          <li><span>Type 2 diabetes / cardiometabolic</span><span class="val">$3K–$7K/pt</span></li>
+        </ul>
+        <p class="tc-note">Lower per-patient revenue than Tier A but faster enrollment and lower protocol complexity. Strong second-study candidates once first psychiatric or AD study is running. Women's health benefits from PMHNP credential more than most operators realize.</p>
+      </div>
+
+      <div class="therapeutic-card tier-c">
+        <div class="tc-eyebrow">Tier C · Opportunistic / fill capacity</div>
+        <div class="tc-title">Lower-margin but operationally light</div>
+        <ul class="tc-list">
+          <li><span>Real-world evidence / registry</span><span class="val">$500–$3K/pt</span></li>
+          <li><span>Decentralized trials</span><span class="val">$1K–$5K/pt</span></li>
+          <li><span>Healthy volunteer Phase 1</span><span class="val">$1K–$4K/pt</span></li>
+          <li><span>Vaccine / infectious disease</span><span class="val">$1K–$3K/pt</span></li>
+          <li><span>Digital therapeutic validation</span><span class="val">$2K–$6K/pt</span></li>
+        </ul>
+        <p class="tc-note">Useful for filling capacity gaps and building sponsor relationships before higher-value contracts arrive. Minimal coordinator load; low complexity. Avoid relying on these as primary revenue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 04 — THREE PATHS ============ -->
+<section class="paths-section" id="paths">
+  <div class="paths-header">
+    <div class="section-num">§ 04 · Three Paths</div>
+    <div>
+      <h2>Under $500K, you cannot launch both at full scale. <em>Pick a path.</em></h2>
+      <p class="paths-deck">The original framework was built around a $1.5M envelope and assumed simultaneous dual launch. At under $500K, that math no longer works — even a stripped-down wellness-only build consumes most of the envelope before research infrastructure is touched. Three sequencing paths fit inside the new reality. Each makes a different trade.</p>
+    </div>
+  </div>
+
+  <div class="capital-reality">
+    <div class="cr-block">
+      <div class="cr-label">What $500K buys</div>
+      <div class="cr-value">~14 months of wellness practice</div>
+      <div class="cr-sub">Lease + light TI + equipment + EMR + 4 months working capital reserve at lean burn</div>
+    </div>
+    <div class="cr-block">
+      <div class="cr-label">What it does not buy</div>
+      <div class="cr-value">Standalone research site</div>
+      <div class="cr-sub">~$95K minimum in research-specific infrastructure (CTMS, eReg, freezers, recruitment, CTA legal)</div>
+    </div>
+    <div class="cr-block">
+      <div class="cr-label">What changes the answer</div>
+      <div class="cr-value">A realistic Year-2 raise</div>
+      <div class="cr-sub">$500K–$1M follow-on round unlocks Path B; without it, Path A or Path C are the honest options</div>
+    </div>
+  </div>
+
+  <div class="path-grid">
+
+    <!-- PATH A -->
+    <div class="path-card recommended">
+      <div class="path-header">
+        <div class="path-letter">A</div>
+        <div class="path-name">Wellness-only Year 1, research deferred</div>
+        <div class="path-summary">Launch the concierge/longevity practice clean. Defer research operations to Year 2+, funded from cash flow or follow-on capital.</div>
+      </div>
+      <div class="path-body">
+        <div class="path-block">
+          <div class="path-block-label">Year 1 Capital</div>
+          <div class="num-line"><span>Lease deposit + 3 mo (2,500 sf)</span><span class="val">$35K</span></div>
+          <div class="num-line"><span>Tenant improvements (founder cap)</span><span class="val">$45K</span></div>
+          <div class="num-line"><span>Clinical equipment + 3 exam rms</span><span class="val">$38K</span></div>
+          <div class="num-line"><span>EMR + dispensary + practice mgmt</span><span class="val">$15K</span></div>
+          <div class="num-line"><span>Brand, web, launch marketing</span><span class="val">$28K</span></div>
+          <div class="num-line"><span>Legal · entity · insurance</span><span class="val">$22K</span></div>
+          <div class="num-line"><span>Founder draws (combined, Y1)</span><span class="val">$165K</span></div>
+          <div class="num-line"><span>Working capital reserve (~5 mo)</span><span class="val">$152K</span></div>
+          <div class="num-line"><strong>Total Year 1</strong><span class="val"><strong>$500K</strong></span></div>
+        </div>
+
+        <div class="path-block">
+          <div class="path-block-label">What this builds</div>
+          <ul>
+            <li>3-tier wellness practice in Gilbert / SE Mesa</li>
+            <li>Capacity for ~250 members at Y1 panel close</li>
+            <li>Behavioral health integrated from Day 1</li>
+            <li>Two-entity structure already filed (research LLC dormant)</li>
+          </ul>
+        </div>
+
+        <div class="path-block">
+          <div class="path-block-label">When research starts</div>
+          <p>Research operations begin <strong>Month 18–24</strong>, funded from accumulated wellness cash flow or a Year-2 friends-and-family / SBA round of $300–$500K. First CTA targeted <strong>Month 24–30</strong>.</p>
+        </div>
+
+        <div class="path-block">
+          <div class="path-block-label">Y3 revenue range (combined)</div>
+          <div class="num-line"><strong>Moderate case</strong><span class="val"><strong>$1.8M–$2.2M</strong></span></div>
+          <div class="num-line"><strong>Y3 EBITDA margin</strong><span class="val"><strong>20–26%</strong></span></div>
+        </div>
+      </div>
+      <div class="path-verdict">
+        <div class="verdict-line"><span><span class="indicator ind-pos"></span>Capital fit</span><strong>Excellent</strong></div>
+        <div class="verdict-line"><span><span class="indicator ind-pos"></span>Execution risk</span><strong>Low</strong></div>
+        <div class="verdict-line"><span><span class="indicator ind-mid"></span>Upside</span><strong>Moderate</strong></div>
+        <div class="verdict-line"><span><span class="indicator ind-pos"></span>Reversibility</span><strong>High</strong></div>
+      </div>
+    </div>
+
+    <!-- PATH B -->
+    <div class="path-card">
+      <div class="path-header">
+        <div class="path-letter">B</div>
+        <div class="path-name">Wellness now, research-ready infrastructure</div>
+        <div class="path-summary">Same lean wellness launch, but lease, EMR, and entity built to absorb research operations 12–18 months earlier than Path A.</div>
+      </div>
+      <div class="path-body">
+        <div class="path-block">
+          <div class="path-block-label">Year 1 Capital</div>
+          <div class="num-line"><span>Lease (3,000 sf, research-spec)</span><span class="val">$42K</span></div>
+          <div class="num-line"><span>Tenant improvements (research-ready)</span><span class="val">$55K</span></div>
+          <div class="num-line"><span>Clinical + light research equipment</span><span class="val">$55K</span></div>
+          <div class="num-line"><span>Research-grade EMR + CTMS-ready</span><span class="val">$22K</span></div>
+          <div class="num-line"><span>Brand, web, launch marketing</span><span class="val">$28K</span></div>
+          <div class="num-line"><span>Legal (dual entity, AKS/Stark plan)</span><span class="val">$32K</span></div>
+          <div class="num-line"><span>Founder draws (combined, Y1)</span><span class="val">$140K</span></div>
+          <div class="num-line"><span>Working capital reserve (~4 mo)</span><span class="val">$120K</span></div>
+          <div class="num-line"><strong>Total Year 1</strong><span class="val"><strong>~$494K</strong></span></div>
+        </div>
+
+        <div class="path-block">
+          <div class="path-block-label">What this builds</div>
+          <ul>
+            <li>3-tier wellness practice with research-spec footprint</li>
+            <li>EMR and entity already compatible with sponsor onboarding</li>
+            <li>Sponsor pipeline outreach begins Month 6</li>
+            <li>Requires Year-2 raise of $400K–$700K to activate research</li>
+          </ul>
+        </div>
+
+        <div class="path-block">
+          <div class="path-block-label">When research starts</div>
+          <p>Sponsor outreach <strong>Month 6</strong>, feasibility questionnaires <strong>Month 10</strong>, first CTA targeted <strong>Month 14–18</strong> contingent on Year-2 raise closing.</p>
+        </div>
+
+        <div class="path-block">
+          <div class="path-block-label">Y3 revenue range (combined)</div>
+          <div class="num-line"><strong>Moderate case</strong><span class="val"><strong>$2.4M–$3.1M</strong></span></div>
+          <div class="num-line"><strong>Y3 EBITDA margin</strong><span class="val"><strong>24–32%</strong></span></div>
+        </div>
+      </div>
+      <div class="path-verdict">
+        <div class="verdict-line"><span><span class="indicator ind-mid"></span>Capital fit</span><strong>Tight</strong></div>
+        <div class="verdict-line"><span><span class="indicator ind-mid"></span>Execution risk</span><strong>Medium</strong></div>
+        <div class="verdict-line"><span><span class="indicator ind-pos"></span>Upside</span><strong>High</strong></div>
+        <div class="verdict-line"><span><span class="indicator ind-med"></span>Reversibility</span><strong>Moderate</strong></div>
+      </div>
+    </div>
+
+    <!-- PATH C -->
+    <div class="path-card">
+      <div class="path-header">
+        <div class="path-letter">C</div>
+        <div class="path-name">Wellness + research-affiliated (no owned site)</div>
+        <div class="path-summary">Launch wellness, but partner with an existing site (Chandler Clinical Trials, ACT, Axsendo, IMA) on a sub-investigator or referral basis. Founders earn PI fees; no site infrastructure built.</div>
+      </div>
+      <div class="path-body">
+        <div class="path-block">
+          <div class="path-block-label">Year 1 Capital</div>
+          <div class="num-line"><span>Lease deposit + 3 mo (2,500 sf)</span><span class="val">$35K</span></div>
+          <div class="num-line"><span>Tenant improvements (founder cap)</span><span class="val">$45K</span></div>
+          <div class="num-line"><span>Clinical equipment + exam rooms</span><span class="val">$38K</span></div>
+          <div class="num-line"><span>EMR + dispensary + practice mgmt</span><span class="val">$15K</span></div>
+          <div class="num-line"><span>Brand, web, launch marketing</span><span class="val">$28K</span></div>
+          <div class="num-line"><span>Legal · entity · insurance + affiliation</span><span class="val">$18K</span></div>
+          <div class="num-line"><span>Founder draws (combined, Y1)</span><span class="val">$165K</span></div>
+          <div class="num-line"><span>Working capital reserve (~6 mo)</span><span class="val">$155K</span></div>
+          <div class="num-line"><strong>Total Year 1</strong><span class="val"><strong>~$499K</strong></span></div>
+        </div>
+
+        <div class="path-block">
+          <div class="path-block-label">What this builds</div>
+          <ul>
+            <li>Wellness practice + sub-investigator agreement with 1–2 local sites</li>
+            <li>Founders earn PI fees ($300–$1,500/visit) for trials run elsewhere</li>
+            <li>Referral fees compliant with AKS safe harbors</li>
+            <li>Lowest infrastructure risk; lowest upside ceiling</li>
+          </ul>
+        </div>
+
+        <div class="path-block">
+          <div class="path-block-label">When research starts</div>
+          <p>Sub-investigator agreement signed <strong>Month 4–8</strong>. Earnings begin same quarter. No standalone site activation; permanent affiliation model unless founders later decide to convert to Path A or B with fresh capital.</p>
+        </div>
+
+        <div class="path-block">
+          <div class="path-block-label">Y3 revenue range (combined)</div>
+          <div class="num-line"><strong>Moderate case</strong><span class="val"><strong>$1.7M–$2.0M</strong></span></div>
+          <div class="num-line"><strong>Y3 EBITDA margin</strong><span class="val"><strong>22–28%</strong></span></div>
+        </div>
+      </div>
+      <div class="path-verdict">
+        <div class="verdict-line"><span><span class="indicator ind-pos"></span>Capital fit</span><strong>Excellent</strong></div>
+        <div class="verdict-line"><span><span class="indicator ind-pos"></span>Execution risk</span><strong>Low</strong></div>
+        <div class="verdict-line"><span><span class="indicator ind-neg"></span>Upside</span><strong>Limited</strong></div>
+        <div class="verdict-line"><span><span class="indicator ind-pos"></span>Reversibility</span><strong>High</strong></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 05 — SIDE BY SIDE COMPARISON ============ -->
+<section class="landscape" id="compare" style="border-bottom: 1px solid var(--rule);">
+  <div class="landscape-header">
+    <div class="section-num">§ 05 · Side by Side</div>
+    <div>
+      <h2>The three paths, <em>compared on the metrics that matter.</em></h2>
+      <p class="landscape-deck">For the co-founder conversation. Each row is a question the founder group needs to answer together. The recommended column is shaded; this isn't a forced choice — it's the path that best fits the under-$500K capital reality assuming no Year-2 raise is committed yet.</p>
+    </div>
+  </div>
+
+  <div class="compare-section">
+    <div class="compare-title">Path comparison matrix</div>
+    <div class="compare-sub">Three sequencing options · same founders · same market · same $500K starting envelope</div>
+
+    <div style="overflow-x: auto;">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="width: 220px;">Dimension</th>
+          <th class="path-col recommended">
+            <span class="ph-letter">A</span>
+            <span class="ph-name">Wellness-Only Year 1</span>
+            <span class="ph-tag">Recommended starting point</span>
+          </th>
+          <th class="path-col">
+            <span class="ph-letter">B</span>
+            <span class="ph-name">Research-Ready Launch</span>
+            <span class="ph-tag">Upside path, tighter capital</span>
+          </th>
+          <th class="path-col">
+            <span class="ph-letter">C</span>
+            <span class="ph-name">Research-Affiliated</span>
+            <span class="ph-tag">Lowest risk, capped upside</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="divider-row"><td colspan="4">Capital & Operations</td></tr>
+        <tr>
+          <td class="row-label">Year 1 capital</td>
+          <td class="num-cell recommended-col">~$500K (full envelope)</td>
+          <td class="num-cell">~$494K (tight to envelope)</td>
+          <td class="num-cell">~$499K (full envelope)</td>
+        </tr>
+        <tr>
+          <td class="row-label">Working capital reserve</td>
+          <td class="recommended-col">5 months at lean burn</td>
+          <td>4 months at lean burn</td>
+          <td>6 months at lean burn</td>
+        </tr>
+        <tr>
+          <td class="row-label">Year-2 capital requirement</td>
+          <td class="recommended-col">Optional ($300–$500K to start research faster)</td>
+          <td><strong>Required</strong> ($400–$700K to activate research)</td>
+          <td>None mandatory</td>
+        </tr>
+        <tr>
+          <td class="row-label">Footprint</td>
+          <td class="num-cell recommended-col">2,500 sf</td>
+          <td class="num-cell">3,000 sf (research-spec)</td>
+          <td class="num-cell">2,500 sf</td>
+        </tr>
+        <tr>
+          <td class="row-label">Year-1 hires beyond founders</td>
+          <td class="recommended-col">1 MA + 0.5 front desk</td>
+          <td>1 MA + 0.5 front desk + research coordinator (P/T)</td>
+          <td>1 MA + 0.5 front desk</td>
+        </tr>
+
+        <tr class="divider-row"><td colspan="4">Wellness Business</td></tr>
+        <tr>
+          <td class="row-label">Year-1 panel target</td>
+          <td class="num-cell recommended-col">180 members</td>
+          <td class="num-cell">180 members</td>
+          <td class="num-cell">180 members</td>
+        </tr>
+        <tr>
+          <td class="row-label">Year-3 panel target</td>
+          <td class="num-cell recommended-col">440 members</td>
+          <td class="num-cell">425 members</td>
+          <td class="num-cell">440 members</td>
+        </tr>
+        <tr>
+          <td class="row-label">Tier mix at Y3 (Foundation/Optimize/Longevity)</td>
+          <td class="recommended-col">58% / 28% / 14%</td>
+          <td>56% / 28% / 16%</td>
+          <td>58% / 28% / 14%</td>
+        </tr>
+
+        <tr class="divider-row"><td colspan="4">Research Business</td></tr>
+        <tr>
+          <td class="row-label">When research operations begin</td>
+          <td class="recommended-col">Month 18–24</td>
+          <td><strong>Month 14–18</strong> (if Y2 raise closes)</td>
+          <td>Month 4–8 (affiliated, no owned site)</td>
+        </tr>
+        <tr>
+          <td class="row-label">First CTA target</td>
+          <td class="recommended-col">Month 24–30</td>
+          <td><strong>Month 14–18</strong></td>
+          <td>N/A (works under existing site CTAs)</td>
+        </tr>
+        <tr>
+          <td class="row-label">Year-3 active studies</td>
+          <td class="num-cell recommended-col">1–2</td>
+          <td class="num-cell">3–4</td>
+          <td class="num-cell">0 owned (sub-investigator on 2–4)</td>
+        </tr>
+        <tr>
+          <td class="row-label">Research revenue model</td>
+          <td class="recommended-col">Owned site (per-patient)</td>
+          <td>Owned site (per-patient)</td>
+          <td>Sub-investigator fees + referral fees</td>
+        </tr>
+
+        <tr class="divider-row"><td colspan="4">Financial Trajectory (Moderate Case)</td></tr>
+        <tr>
+          <td class="row-label">Year-1 total revenue</td>
+          <td class="num-cell recommended-col">$540K</td>
+          <td class="num-cell">$565K</td>
+          <td class="num-cell">$595K</td>
+        </tr>
+        <tr>
+          <td class="row-label">Year-2 total revenue</td>
+          <td class="num-cell recommended-col">$1,250K</td>
+          <td class="num-cell">$1,510K</td>
+          <td class="num-cell">$1,395K</td>
+        </tr>
+        <tr>
+          <td class="row-label">Year-3 total revenue</td>
+          <td class="num-cell recommended-col">$1,950K</td>
+          <td class="num-cell">$2,720K</td>
+          <td class="num-cell">$1,850K</td>
+        </tr>
+        <tr>
+          <td class="row-label">Year-5 total revenue</td>
+          <td class="num-cell recommended-col">$3,250K</td>
+          <td class="num-cell">$4,650K</td>
+          <td class="num-cell">$2,775K</td>
+        </tr>
+        <tr>
+          <td class="row-label">Year-3 EBITDA margin</td>
+          <td class="num-cell recommended-col">22–26%</td>
+          <td class="num-cell">28–34%</td>
+          <td class="num-cell">22–28%</td>
+        </tr>
+        <tr>
+          <td class="row-label">Cash-flow breakeven</td>
+          <td class="recommended-col">Month 10–12</td>
+          <td>Month 14–16</td>
+          <td>Month 9–11</td>
+        </tr>
+
+        <tr class="divider-row"><td colspan="4">Risk & Strategic Profile</td></tr>
+        <tr>
+          <td class="row-label">Execution risk</td>
+          <td class="recommended-col"><span class="indicator ind-pos"></span>Low — single business focus</td>
+          <td><span class="indicator ind-mid"></span>Medium — dual launch + Y2 raise dependency</td>
+          <td><span class="indicator ind-pos"></span>Low — partner does the heavy lifting</td>
+        </tr>
+        <tr>
+          <td class="row-label">Reversibility</td>
+          <td class="recommended-col"><span class="indicator ind-pos"></span>High — can pivot to B or C at Y2</td>
+          <td><span class="indicator ind-med"></span>Moderate — research-spec lease is sunk cost</td>
+          <td><span class="indicator ind-pos"></span>High — can build owned site later</td>
+        </tr>
+        <tr>
+          <td class="row-label">5-year exit multiple potential</td>
+          <td class="num-cell recommended-col">3.5–5x (wellness-dominant)</td>
+          <td class="num-cell"><strong>5–8x (integrated)</strong></td>
+          <td class="num-cell">3.5–4.5x (wellness only)</td>
+        </tr>
+        <tr>
+          <td class="row-label">Founder lifestyle Year 1</td>
+          <td class="recommended-col">Demanding but focused</td>
+          <td>Most demanding — two builds at once</td>
+          <td>Demanding but focused</td>
+        </tr>
+        <tr>
+          <td class="row-label">AKS / Stark compliance load</td>
+          <td class="recommended-col">Moderate (entity ready, no active referrals yet)</td>
+          <td><strong>High</strong> (active dual-entity from Day 1)</td>
+          <td><strong>High</strong> (affiliation agreement is the compliance core)</td>
+        </tr>
+        <tr>
+          <td class="row-label">Best for...</td>
+          <td class="recommended-col">Founders who want the lowest-risk path to a viable practice</td>
+          <td>Founders confident a Year-2 raise is realistic</td>
+          <td>Founders who want research income without operational complexity</td>
+        </tr>
+
+        <tr class="divider-row"><td colspan="4">Composite Fit Score (under-$500K constraint)</td></tr>
+        <tr>
+          <td class="row-label">Capital fit</td>
+          <td class="recommended-col"><div class="fit-bar"><div class="fit-track"><div class="fit-fill" style="width:92%"></div></div><span class="fit-num">9.2</span></div></td>
+          <td><div class="fit-bar"><div class="fit-track"><div class="fit-fill" style="width:68%"></div></div><span class="fit-num">6.8</span></div></td>
+          <td><div class="fit-bar"><div class="fit-track"><div class="fit-fill" style="width:90%"></div></div><span class="fit-num">9.0</span></div></td>
+        </tr>
+        <tr>
+          <td class="row-label">Upside potential</td>
+          <td class="recommended-col"><div class="fit-bar"><div class="fit-track"><div class="fit-fill" style="width:70%"></div></div><span class="fit-num">7.0</span></div></td>
+          <td><div class="fit-bar"><div class="fit-track"><div class="fit-fill" style="width:88%"></div></div><span class="fit-num">8.8</span></div></td>
+          <td><div class="fit-bar"><div class="fit-track"><div class="fit-fill" style="width:55%"></div></div><span class="fit-num">5.5</span></div></td>
+        </tr>
+        <tr>
+          <td class="row-label">Risk-adjusted return</td>
+          <td class="recommended-col"><div class="fit-bar"><div class="fit-track"><div class="fit-fill" style="width:85%"></div></div><span class="fit-num">8.5</span></div></td>
+          <td><div class="fit-bar"><div class="fit-track"><div class="fit-fill" style="width:75%"></div></div><span class="fit-num">7.5</span></div></td>
+          <td><div class="fit-bar"><div class="fit-track"><div class="fit-fill" style="width:70%"></div></div><span class="fit-num">7.0</span></div></td>
+        </tr>
+        <tr style="background: var(--ink); color: var(--ochre);">
+          <td class="row-label" style="background: var(--ink); color: var(--ochre);">Composite Score</td>
+          <td class="num-cell recommended-col" style="background: var(--terracotta); color: var(--paper); font-weight: 700;"><strong>8.2 / 10</strong></td>
+          <td class="num-cell" style="color: var(--ochre); font-weight: 700;"><strong>7.7 / 10</strong></td>
+          <td class="num-cell" style="color: var(--ochre); font-weight: 700;"><strong>7.2 / 10</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 06 — DECISION GUIDE ============ -->
+<section class="decision-section" id="decision">
+  <div class="decision-inner">
+    <div class="decision-eyebrow">§ 06 · Decision Guide</div>
+    <h2 class="decision-title">If the founder group can answer <em>yes</em> to these three questions in the same conversation, the choice becomes obvious.</h2>
+
+    <div class="decision-grid">
+      <div class="decision-card">
+        <div class="decision-card-label">Question 01</div>
+        <div class="decision-card-q">Is a Year-2 raise of $400–$700K realistic and committed?</div>
+        <div class="decision-card-a">If <strong>yes</strong> — Path B is on the table. If <strong>no or uncertain</strong> — Path A is the only honest version of the integrated thesis; the research side comes in Year 3 from cash flow. Don't pick B and hope for the raise.</div>
+      </div>
+
+      <div class="decision-card">
+        <div class="decision-card-label">Question 02</div>
+        <div class="decision-card-q">Do the founders want to run a research site themselves, or have research income without running a site?</div>
+        <div class="decision-card-a">If <strong>run it themselves</strong> — A or B. If <strong>income without operations</strong> — C. This is a real preference question, not a business question; the answer is about how founders want to spend their working hours over the next 5 years.</div>
+      </div>
+
+      <div class="decision-card">
+        <div class="decision-card-label">Question 03</div>
+        <div class="decision-card-q">Is the 5-year exit thesis required, or is steady cash-flowing practice ownership the goal?</div>
+        <div class="decision-card-a">If <strong>exit thesis required</strong> — B delivers the multiple-arbitrage exit; A delivers a smaller wellness-dominant exit; C delivers the smallest. If <strong>cash flow > exit</strong> — A or C both work and reduce risk meaningfully.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 07 — YEAR-2 RAISE READINESS (PATH B) ============ -->
+<section class="raise-section" id="raise">
+  <div class="section-header">
+    <div class="section-num">§ 07 · Year-2 Raise</div>
+    <div>
+      <h2>If Path B is the choice, the <em>raise is part of the Year-1 plan.</em></h2>
+      <p class="deck">Path B only works if the founders can close $400K–$700K of follow-on capital by Month 12. That round will not be closeable without specific milestones, financial proof-points, and documentation prepared during Months 1–9. This is the readiness checklist.</p>
+    </div>
+  </div>
+
+  <div class="raise-intro">
+    <p>The Year-2 raise is not a "we'll figure it out when we get there" line item. <strong>It is the single highest-leverage workstream in the Year-1 plan</strong> after the wellness launch itself. Friends-and-family rounds at this size close on three things: defensible numbers, a credible operator, and a use-of-funds the investor can model. The checklist below assumes the founders are raising from a combination of friends, family, individual angel healthcare operators, and possibly an SBA 7(a) loan for a portion. It does not assume institutional capital.</p>
+  </div>
+
+  <div class="checklist-grid">
+
+    <div class="checklist-block">
+      <div class="checklist-block-eyebrow">Months 1–3 · Foundation</div>
+      <div class="checklist-block-title">The work that has to happen before the raise even starts</div>
+      <div class="checklist-block-sub">If this isn't done, nothing else in the checklist matters</div>
+      <ul class="check-list">
+        <li><strong>Dual entity structure filed and operating</strong>Wellness PC + Research LLC both active, with separate bank accounts. Investor's first diligence question: "where would I actually invest?" The answer must be the Research LLC, not a vague "newco."</li>
+        <li><strong>AKS / Stark compliance memo from healthcare regulatory counsel</strong>Written compliance program addressing inter-entity referrals, founder compensation flow, and patient consent. Investor diligence will ask for this; without it, the deal pauses.</li>
+        <li><strong>Founders' personal financial disclosure prepared</strong>Personal net worth statement, existing debt, expected founder capital contribution alongside the raise. Friends-and-family rounds require the founders to put in the first dollars.</li>
+        <li><strong>Clean monthly P&L from Month 1 forward</strong>QuickBooks Online + monthly close discipline. Investors will ask for trailing 9 months. If the books are messy, the round closes 60 days late.</li>
+      </ul>
+    </div>
+
+    <div class="checklist-block">
+      <div class="checklist-block-eyebrow">Months 4–6 · Proof Points</div>
+      <div class="checklist-block-title">The operational milestones that make the raise credible</div>
+      <div class="checklist-block-sub">Investors fund traction, not plans</div>
+      <ul class="check-list">
+        <li><strong>≥ 80 paying members across the wellness panel</strong>Month 6 milestone. This is the inflection point investors look for — it proves the membership thesis is real, not theoretical. Tier 2 + Tier 3 mix above 25% is a bonus signal.</li>
+        <li><strong>Monthly recurring revenue ≥ $35K by Month 6</strong>Implies the wellness side is on a $420K+ annualized trajectory. Below this number the raise becomes a "rescue round" psychologically; above it, it's a "growth round."</li>
+        <li><strong>CRC candidate identified and pre-offered</strong>Not hired yet (research isn't activated), but the candidate is known to the founders, the offer is drafted, and the start date is conditional on the raise closing. Demonstrates the use-of-funds is real.</li>
+        <li><strong>Sponsor pipeline outreach initiated (3–5 active conversations)</strong>Outreach via warm intros — not signed CTAs, just confirmed sponsor or CRO conversations with documented next steps. Shows the research side has a real demand signal, not wishful thinking.</li>
+        <li><strong>Patient retention ≥ 90% in Months 4–6</strong>Early-cohort retention is the canary in the coal mine. Concierge practices that lose 10%+ of charter members in the first 90 days have a brand or experience problem the raise won't fix.</li>
+      </ul>
+    </div>
+
+    <div class="checklist-block">
+      <div class="checklist-block-eyebrow">Months 7–9 · Documentation</div>
+      <div class="checklist-block-title">The data room and pitch materials</div>
+      <div class="checklist-block-sub">If a friends-and-family investor asks for it, it should already exist</div>
+      <ul class="check-list">
+        <li><strong>15-page investor memo / pitch deck</strong>Distilled version of this brief, tuned for the specific audience. Less narrative, more numbers. Include the wellness traction (Months 1–9 actuals), the research thesis with named therapeutic areas, the use-of-funds, and the 24-month milestone map.</li>
+        <li><strong>Three-year financial model in Excel</strong>Live model with assumption tabs, not a static PDF. Investors will want to flex member ramp, attrition, and study count themselves. Build it as if a CFO will pressure-test it — because one will.</li>
+        <li><strong>Term sheet template drafted</strong>Choose a structure ahead of time: SAFE (common for early friends-and-family), convertible note (if you want a debt-like instrument), or priced preferred (more complex but cleaner). Have counsel review before the first investor sees it.</li>
+        <li><strong>Personal references / advisory letters of intent (LOI)</strong>2–3 named clinical advisors, ideally with research site experience or healthcare PE familiarity. LOI doesn't need to be a contract — a one-page commitment to advise post-close is enough.</li>
+        <li><strong>Use-of-funds memo with month-by-month deployment</strong>Where every dollar of the $400–$700K goes, by month, by category. Investors will not write a check against "research buildout — TBD." They will write a check against "$95K research equipment + CTMS in Months 13–14, CRC hire Month 13, regulatory & legal Months 13–15, working capital extension Months 13–18."</li>
+      </ul>
+    </div>
+
+    <div class="checklist-block">
+      <div class="checklist-block-eyebrow">Months 10–12 · The Close</div>
+      <div class="checklist-block-title">Closing the round and activating research</div>
+      <div class="checklist-block-sub">Six weeks of execution turns the readiness into capital</div>
+      <ul class="check-list">
+        <li><strong>Soft-circle commitments ≥ 80% of target round size</strong>Before formally opening the round, identify investors who have verbally committed dollar amounts. A $500K target round is closeable when $400K is soft-circled; below 60% soft-circled, delay the open.</li>
+        <li><strong>SBA 7(a) loan application in progress (optional but accretive)</strong>If a portion of the $400–$700K can come as SBA debt rather than equity, founder dilution stays lower. Application takes 60–90 days; start by Month 9 to land funds by Month 12.</li>
+        <li><strong>Legal documents and closing mechanics ready</strong>Subscription agreements, investor questionnaires (accredited investor verification), wire instructions, cap table updated in Carta or similar. A round that drags through legal for 8 weeks loses momentum and investors.</li>
+        <li><strong>Month 12 close · Month 13 deployment begins</strong>Capital lands. CRC starts Month 13. Research equipment ordered Month 13. First sponsor CTA target moves from "aspirational" to "Month 14–18 commitment."</li>
+        <li><strong>Investor reporting cadence established</strong>Quarterly updates to investors from Day 1 post-close. Not because it's required at this size, but because the next round (if needed) is easier with a 12-month track record of communication.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 08 — CONVERT A→B ============ -->
+<section class="convert-section" id="convert">
+  <div class="section-header">
+    <div class="section-num">§ 08 · Convert A → B</div>
+    <div>
+      <h2>Picking Path A doesn't close the door. It <em>sequences the door.</em></h2>
+      <p class="deck">If the wellness practice outperforms moderate-case projections through Months 12–18, Path A converts into Path B without a discrete capital event — the conversion is funded organically from accumulated cash flow. This appendix maps exactly what triggers the conversion, what it costs, and how to time it.</p>
+    </div>
+  </div>
+
+  <div class="convert-intro">
+    <p>The conversion thesis is simple. <strong>Path A is Path B with the research activation deferred.</strong> If accumulated wellness cash flow at Month 18 exceeds $180K above plan, the founders can self-fund research activation without an external raise — or they can layer a smaller, less-dilutive raise on top of the cash flow. The five gates below define the conversion path. Each gate is a real go/no-go decision point with measurable criteria. If a gate's criteria aren't met, the founders pause, recalibrate, and re-evaluate at the next checkpoint — they don't force the conversion.</p>
+  </div>
+
+  <div class="gate-timeline">
+
+    <div class="gate-item">
+      <div class="gate-when">Gate 01 · Month 6 checkpoint</div>
+      <div class="gate-title">Wellness ramp is on or ahead of plan</div>
+      <div class="gate-body">The first signal that conversion is on the table. If member growth is on plan, retention is healthy, and Tier 2/3 mix is converting as modeled, the founders begin laying preparation work for Gate 02. If membership is behind plan, focus stays exclusively on wellness execution.</div>
+      <div class="gate-criteria">
+        <div class="gate-criteria-label">Pass criteria · all must be true</div>
+        <ul>
+          <li>≥ 80 paying members across all three tiers</li>
+          <li>≥ 92% retention of charter cohort (first 30 members)</li>
+          <li>Tier 2 + Tier 3 mix ≥ 25% of total panel</li>
+          <li>Monthly recurring revenue ≥ $35K</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gate-item">
+      <div class="gate-when">Gate 02 · Months 7–12 · Pipeline pre-work</div>
+      <div class="gate-title">Sponsor outreach and CRC pre-identification</div>
+      <div class="gate-body">During this window the founders begin building the sponsor pipeline that activates research. This is unpaid work — no research revenue yet — but it positions the site so that Month 13 activation has a real pipeline to convert. The CRC candidate is identified but not yet hired.</div>
+      <div class="gate-criteria">
+        <div class="gate-criteria-label">Pass criteria · all must be true</div>
+        <ul>
+          <li>3–5 active sponsor conversations with documented next steps</li>
+          <li>At least 1 feasibility questionnaire returned</li>
+          <li>CRC candidate identified, informally pre-offered</li>
+          <li>Wellness panel ≥ 180 members; MRR ≥ $80K</li>
+          <li>Accumulated cash flow above plan ≥ $90K</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gate-item">
+      <div class="gate-when">Gate 03 · Month 12 · The conversion decision</div>
+      <div class="gate-title">Self-fund vs. raise vs. continue Path A</div>
+      <div class="gate-body">The fork. Three options on the table: (a) self-fund research activation from accumulated cash flow alone if the surplus is large enough; (b) self-fund partially and add a small $200–$300K friends-and-family round; (c) extend Path A another 6–12 months and re-evaluate at Month 18. This decision is binding for the next 6 months — once committed, the operational tempo changes.</div>
+      <div class="gate-criteria">
+        <div class="gate-criteria-label">Pass criteria · enables Gate 04</div>
+        <ul>
+          <li>Accumulated cash flow above plan ≥ $180K (self-fund threshold)</li>
+          <li>OR accumulated surplus + soft-circled $200K+ friends-and-family</li>
+          <li>Wellness panel ≥ 250 members and trending up</li>
+          <li>≥ 1 named sponsor with explicit interest in placing a study</li>
+          <li>CRC offer accepted, start date set for Month 13</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gate-item">
+      <div class="gate-when">Gate 04 · Months 13–18 · Activation</div>
+      <div class="gate-title">Research operations stand up · first CTA targeted</div>
+      <div class="gate-body">CRC starts. Research equipment ordered and installed. CTMS / eReg activated. Regulatory documentation prepared. Sponsor outreach intensifies. The wellness practice continues operating normally — founders do not reduce wellness time during this window; the CRC absorbs the research operational load. First site qualification visits expected Months 15–17.</div>
+      <div class="gate-criteria">
+        <div class="gate-criteria-label">Pass criteria · validates the conversion</div>
+        <ul>
+          <li>CRC fully onboarded by Month 14</li>
+          <li>CTMS + eReg operational by Month 15</li>
+          <li>≥ 2 site qualification visits completed by Month 17</li>
+          <li>First CTA signed or in active negotiation by Month 18</li>
+          <li>Wellness MRR continues to grow during activation period</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gate-item">
+      <div class="gate-when">Gate 05 · Months 19–24 · Stabilization</div>
+      <div class="gate-title">Second study activated · two-business operating cadence</div>
+      <div class="gate-body">The conversion is complete. The operating framework is now genuinely dual-business: wellness panel scaling toward 380+ members, first study enrolling, second CTA in negotiation. Founder time allocation rebalances: roughly 65% wellness clinical, 25% research PI activities, 10% business operations. The integration thesis is now operational rather than aspirational.</div>
+      <div class="gate-criteria">
+        <div class="gate-criteria-label">Pass criteria · conversion confirmed successful</div>
+        <ul>
+          <li>First study actively enrolling patients</li>
+          <li>Second CTA signed or in late-stage negotiation</li>
+          <li>Wellness panel ≥ 320 members</li>
+          <li>Combined EBITDA positive on monthly basis</li>
+          <li>Investor reporting cadence established (if outside capital was raised)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cost-band">
+    <div class="cost-band-eyebrow">The conversion economics</div>
+    <div class="cost-band-title">What converting from A to B actually costs at Month 13</div>
+    <div class="cost-band-grid">
+      <div class="cost-block">
+        <div class="cb-label">Research activation capital</div>
+        <div class="cb-value">~$185K</div>
+        <div class="cb-sub">Equipment ($45K) + CTMS/eReg ($24K) + CRC year-1 salary + benefits ($95K) + regulatory & legal ($21K)</div>
+      </div>
+      <div class="cost-block">
+        <div class="cb-label">Self-fund threshold (Gate 03)</div>
+        <div class="cb-value">$180K cash flow above plan</div>
+        <div class="cb-sub">Sufficient to fund activation without external capital if wellness is meaningfully ahead of moderate-case projections</div>
+      </div>
+      <div class="cost-block">
+        <div class="cb-label">Hybrid threshold (most likely)</div>
+        <div class="cb-value">$90K + $200K F&F</div>
+        <div class="cb-sub">$90K cash flow surplus combined with a smaller, less-dilutive friends-and-family round funds activation with a runway buffer</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-band">
+    <div class="takeaway-band-label">Why this matters for the founder group decision</div>
+    <p>Picking Path A is not a downgrade of the integrated thesis — it's a <strong>conservative sequencing of the integrated thesis</strong>. The conversion path is real, the gates are measurable, and the capital required for conversion is meaningfully smaller than the upfront Path B raise. The founder group can pick A today, prove the wellness model through Months 1–12, and convert to B at Month 13–18 with materially better terms than they could raise today. The optionality is the point.</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 09 — UNIVERSAL RISKS ============ -->
+<section class="risks-section" id="risks">
+  <div class="section-header">
+    <div class="section-num">§ 09 · Risks</div>
+    <div>
+      <h2>Five risks that <em>apply to all three paths.</em></h2>
+      <p class="deck">These are not path-specific. Whichever sequencing the founders choose, these are the items the group should agree on mitigations for before signing the lease LOI.</p>
+    </div>
+  </div>
+
+  <div class="risks-grid">
+    <div class="risk-card">
+      <span class="risk-badge risk-h">High</span>
+      <div class="risk-body">
+        <div class="risk-title">Membership ramp slower than modeled</div>
+        <p class="risk-mit">All three paths assume ~180 members by end of Year 1. Concierge ramps in Phoenix metro have historically averaged 14–22 months to that milestone. <strong>Mitigation:</strong> Soft-launch with founder networks at 30 charter members; snowbird-season campaign (Oct–Apr); 12-month tier-conversion checkpoints with marketing pivot triggers.</p>
+      </div>
+    </div>
+    <div class="risk-card">
+      <span class="risk-badge risk-h">High</span>
+      <div class="risk-body">
+        <div class="risk-title">Behavioral health integration gets diluted</div>
+        <p class="risk-mit">The PMHNP credential is a primary differentiator across all three paths. If behavioral health becomes "an add-on for some members" instead of woven through every tier, the differentiation disappears. <strong>Mitigation:</strong> The founding PMHNP carries a defined psych panel from Month 1, with intake screening for every wellness member regardless of tier.</p>
+      </div>
+    </div>
+    <div class="risk-card">
+      <span class="risk-badge risk-h">High</span>
+      <div class="risk-body">
+        <div class="risk-title">AKS / Stark compliance architecture under-built</div>
+        <p class="risk-mit">Every path has compliance exposure — A defers it, B activates it Day 1, C makes it the core of the affiliation agreement. <strong>Mitigation:</strong> Two entities filed at Day 1 regardless of path; healthcare regulatory counsel engaged pre-launch; written referral protocol exists before the first patient is referred or the first CTA is signed.</p>
+      </div>
+    </div>
+    <div class="risk-card">
+      <span class="risk-badge risk-m">Med</span>
+      <div class="risk-body">
+        <div class="risk-title">Founders try to wear every hat</div>
+        <p class="risk-mit">At under-$500K Year-1 capital, hiring is thin. The temptation is for founders to absorb admin, marketing, billing, and operations as well as clinical. <strong>Mitigation:</strong> Defined founder roles in writing before launch. A part-time practice manager hire by Month 6, even if it means trimming founder draws.</p>
+      </div>
+    </div>
+    <div class="risk-card">
+      <span class="risk-badge risk-m">Med</span>
+      <div class="risk-body">
+        <div class="risk-title">Lease terms lock the founders in</div>
+        <p class="risk-mit">A 7-year fixed lease at the wrong rent is a $200K+ unforced error. <strong>Mitigation:</strong> Target 3+2+2 structure with renewal options; landlord TI allowance of $20–$30/sf for second-generation medical space; right of first refusal on adjacent suite for future expansion.</p>
+      </div>
+    </div>
+    <div class="risk-card">
+      <span class="risk-badge risk-l">Low</span>
+      <div class="risk-body">
+        <div class="risk-title">Local economic softening</div>
+        <p class="risk-mit">Phoenix metro household-income demographics in the target submarkets are strong but not immune to a broader downturn affecting self-pay willingness. <strong>Mitigation:</strong> Tier 1 pricing ($2,400/yr) sits below the regional concierge floor of $2,500; downside scenarios assume 35% slower ramp; lease has built-in flexibility above.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div>
+        <h4>About this brief</h4>
+        <p>Founder-facing strategic brief considering a physician-led integrated healthcare platform in greater Phoenix. Constructed against a sub-$500K Year-1 capital envelope. Designed for distribution to co-founders and trusted advisors as a basis for the sequencing decision.</p>
+        <p style="margin-top:16px;">All financial projections are illustrative scenarios derived from industry benchmarks and current publicly available competitor and market data; they are not warranties of outcome.</p>
+        <p style="margin-top:16px;">Confidential. Not for external distribution without founder approval.</p>
+      </div>
+      <div>
+        <h4>Methodology</h4>
+        <p>Competitor data, demographic data, real estate benchmarks, and clinical research benchmarks were triangulated from current web research. Submarket recommendation reflects scored comparison across twelve wellness and research variables. Therapeutic prioritization is aligned to the credentials of the founding physician (IM/Geriatrics) and the founding PMHNP, with focus on lucrative trial categories where the credential combination is differentiating.</p>
+      </div>
+      <div>
+        <h4>Key sources</h4>
+        <div class="footer-sources">
+          MD² Scottsdale<br>
+          NuGen Medicine<br>
+          Scottsdale Private Physicians<br>
+          IFM · Institute for Functional Medicine<br>
+          Banner Alzheimer's Institute<br>
+          Arizona Alzheimer's Consortium<br>
+          Chandler Clinical Trials<br>
+          Arizona Clinical Trials / ACT<br>
+          Axsendo Clinical Research<br>
+          IMA Clinical Research<br>
+          U of Arizona College of Medicine — Phoenix<br>
+          US Census Bureau · ACS 2019–2023<br>
+          CommercialCafe · Phoenix MOB<br>
+          CRIO · site valuation 2025<br>
+          Evergreen for Founders<br>
+          Applied Clinical Trials Online<br>
+          CenExel · psychiatric trial categories
+        </div>
+      </div>
+    </div>
+    <div class="footer-rule">
+      <div class="footer-bottom">
+        <span>Confidential — Founder brief v1</span>
+        <span>May 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const navButtons = document.querySelectorAll('.nav-btn');
+const sectionIds = ['overview', 'landscape', 'competitive', 'paths', 'compare', 'decision', 'raise', 'convert', 'risks'];
+const sections = sectionIds.map(id => document.getElementById(id));
+
+navButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.getElementById(btn.dataset.target);
+    if (target) {
+      const offset = 130;
+      const pos = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: pos, behavior: 'smooth' });
+    }
+  });
+});
+
+function updateNav() {
+  let current = 'overview';
+  sections.forEach(sec => {
+    if (sec && sec.getBoundingClientRect().top < 200) current = sec.id;
+  });
+  navButtons.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.target === current);
+  });
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+
+// Competitive landscape toggle
+const compButtons = document.querySelectorAll('.comp-toggle-btn');
+const compContents = document.querySelectorAll('.comp-tab-content');
+compButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    compButtons.forEach(b => b.classList.remove('active'));
+    compContents.forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.comp).classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
